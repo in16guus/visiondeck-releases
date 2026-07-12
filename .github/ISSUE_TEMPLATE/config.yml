@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: VisionDeck Support
+    url: https://in16guus.github.io/visiondeck-releases/support.html
+    about: Installation, pairing, subscriptions, performance, and common fixes
+  - name: Private security report
+    url: https://github.com/in16guus/visiondeck-releases/security/advisories/new
+    about: Report vulnerabilities privately; do not open a public issue

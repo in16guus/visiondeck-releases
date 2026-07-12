@@ -1,0 +1,29 @@
+name: Feature request
+description: Suggest a useful VisionDeck improvement
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the workflow or user need, not only a proposed control.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Apple Vision Pro
+        - Mac Host
+        - Both
+        - Website or support
+    validations:
+      required: true

@@ -1,0 +1,58 @@
+name: Bug report
+description: Report a reproducible VisionDeck problem
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include pairing codes, private screen content, Apple Account information, or unredacted personal logs.
+  - type: input
+    id: version
+    attributes:
+      label: VisionDeck version
+      placeholder: "1.0.0 (build 1)"
+    validations:
+      required: true
+  - type: input
+    id: systems
+    attributes:
+      label: macOS and visionOS versions
+      placeholder: "macOS 26.5; visionOS 26.5"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Pairing or connection
+        - Video or latency
+        - Audio
+        - Input
+        - Screen arrangement or profiles
+        - Subscription or restore
+        - Mac Host installation or update
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Use fictitious content and redact personal information.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed pairing codes, private content, Apple Account information, and personal data.
+          required: true
