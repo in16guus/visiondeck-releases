@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VisionDeck — Release Notes</title>
+<style>
+:root { --bg: #0b0918; --fg: #f5f3ff; --muted: #b6b0e6; --accent: #a78bfa; --card: #1a153a; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--fg); }
+.container { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
+h1 { font-size: 40px; margin-bottom: 8px; color: var(--accent); }
+.subtitle { color: var(--muted); margin-bottom: 40px; }
+h2 { font-size: 26px; margin: 40px 0 8px; }
+.date { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+h3 { font-size: 18px; margin: 20px 0 8px; color: var(--accent); }
+p, li { color: var(--muted); margin-bottom: 8px; }
+ul { padding-left: 24px; margin-bottom: 16px; }
+a { color: var(--accent); }
+.nav { margin-bottom: 32px; }
+.release { background: var(--card); padding: 24px; border-radius: 12px; margin-bottom: 24px; }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="nav"><a href="index.html">← VisionDeck</a></div>
+
+    <h1>Release Notes</h1>
+    <p class="subtitle">Version history and what's new.</p>
+
+    <div class="release">
+        <h2>1.0.0 — first public release</h2>
+        <div class="date">2026-07-11</div>
+
+        <h3>What you get</h3>
+        <ul>
+            <li>Up to five real virtual macOS displays streamed to Apple Vision Pro as floating RealityKit planes.</li>
+            <li>Three spatial layouts: flat grid, curved wrap, mixed (curved sides + flat center).</li>
+            <li>Per-screen drag / pinch-resize / twist / tilt / curve, with persistent settings per preset.</li>
+            <li>Gaze-aware bitrate — the focused screen gets full quality; peripherals run lighter.</li>
+            <li>Hardware HEVC encode with H.264 fallback and a low-latency local transport.</li>
+            <li>TLS/DTLS protection established through explicit, code-confirmed device pairing.</li>
+            <li>Mac audio plus direct pointer, click, scroll, and keyboard input.</li>
+            <li>Bonjour auto-discovery: open both apps, tap to pair.</li>
+            <li>Coexistence with the Apple environment already selected in visionOS.</li>
+            <li>Optional Custom Photo environment using an image selected by the wearer.</li>
+            <li>Screen resizing up to 16× without changing the saved workspace when switching layouts.</li>
+            <li>Sparkle-based automatic updates on the Mac.</li>
+            <li>Full first-launch onboarding flow on both sides.</li>
+        </ul>
+
+        <h3>Distribution</h3>
+        <ul>
+            <li>visionOS app: free on the Apple Vision Pro App Store.</li>
+            <li>macOS host: notarized DMG from GitHub Releases (the host uses a private macOS display API not permitted on the App Store).</li>
+        </ul>
+
+        <h3>Honest limitations</h3>
+        <ul>
+            <li>Local network only — no cloud, no internet pairing.</li>
+            <li>Single Mac per session.</li>
+            <li>Requires Screen Recording grant on macOS.</li>
+            <li>Apple controls the named system-environment picker; public APIs do not let VisionDeck select a specific Apple environment.</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VisionDeck — Privacy</title>
+<style>
+:root { --bg: #0b0918; --fg: #f5f3ff; --muted: #b6b0e6; --accent: #a78bfa; --card: #1a153a; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--fg); }
+.container { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
+h1 { font-size: 40px; margin-bottom: 8px; color: var(--accent); }
+.subtitle { color: var(--muted); margin-bottom: 40px; }
+h2 { font-size: 22px; margin: 40px 0 12px; }
+p, li { color: var(--muted); margin-bottom: 12px; }
+ul { padding-left: 24px; margin-bottom: 16px; }
+a { color: var(--accent); }
+.nav { margin-bottom: 32px; }
+.summary { background: var(--card); padding: 24px; border-radius: 12px; margin-bottom: 32px; }
+.summary h3 { color: var(--fg); font-size: 20px; margin-bottom: 12px; }
+.summary li { color: var(--fg); }
+hr { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 48px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="nav"><a href="index.html">← VisionDeck</a></div>
+
+    <h1>Privacy</h1>
+    <p class="subtitle">Last updated: 2026-07-11.</p>
+
+    <div class="summary">
+        <h3>The short version</h3>
+        <ul>
+            <li>VisionDeck does not collect, sell, or send your data to us or to third parties.</li>
+            <li>No telemetry. No analytics. No cloud account. No advertising.</li>
+            <li>Frames stream directly from your Mac to your Vision Pro over local network. Nothing leaves your LAN.</li>
+            <li>The Mac app contacts GitHub Pages (this site) to check for updates. That's the only network traffic outside your LAN.</li>
+        </ul>
+    </div>
+
+    <h2>What data flows where</h2>
+    <p><strong>Inside your LAN:</strong> the visionOS app discovers the Mac via Bonjour and connects to the host over TCP and UDP. Captured screen frames and Mac audio are encoded and streamed to the headset. Pointer, keyboard, layout, and focus updates flow back to the paired Mac. VisionDeck protects these application connections with TLS and DTLS using the secret established during pairing. Traffic is also protected by your local network's link security.</p>
+
+    <p><strong>Outside your LAN:</strong> the Mac app's Sparkle updater fetches the signed RSS appcast from the public <code>in16guus/visiondeck-releases</code> GitHub Release roughly once per day to see if a new version is available. The visionOS app makes no outbound network requests.</p>
+
+    <h2>What we store on your device</h2>
+    <ul>
+        <li>Your workspace layout / preset / environment choice in <code>NSUserDefaults</code> so it restores on next launch.</li>
+        <li>A custom-environment photo you opt to use, in the visionOS app's Application Support directory.</li>
+        <li>The pairing secret in the operating system Keychain on both devices.</li>
+        <li>Sparkle's update-check timestamp in <code>NSUserDefaults</code> on the Mac.</li>
+    </ul>
+    <p>You can remove the custom photo from inside VisionDeck. Deleting the apps removes their local settings and files. The pairing secret is overwritten after you enter and successfully connect with a different pairing code; operating-system Keychain items may otherwise persist across reinstall.</p>
+
+    <h2>What permissions VisionDeck asks for</h2>
+    <ul>
+        <li><strong>Screen Recording (Mac)</strong> — required to capture and stream your displays to the headset. This is the entire point of the app.</li>
+        <li><strong>Local Network (both)</strong> — required to find each other via Bonjour and connect.</li>
+        <li><strong>World sensing and hand tracking (Vision Pro)</strong> — used for spatial screen placement and direct interaction while the immersive workspace is open.</li>
+        <li><strong>Photos (Vision Pro, user initiated)</strong> — Apple's system photo picker provides only the photo you choose for Custom Photo. VisionDeck does not browse your library.</li>
+    </ul>
+    <p>VisionDeck does not request camera, microphone, contacts, or location access.</p>
+
+    <h2>App Store Privacy Manifest</h2>
+    <p>The bundled Apple-required Privacy Manifests declare no tracking, no collected data types, and only standard reasons for UserDefaults and file-timestamp access. You can inspect them in the app bundles or in the source tree at <code>Apps/ImmersedMac/PrivacyInfo.xcprivacy</code> and <code>Apps/ImmersedVision/PrivacyInfo.xcprivacy</code>.</p>
+
+    <h2>Third-party components</h2>
+    <ul>
+        <li><strong>Sparkle</strong> — auto-update framework for the Mac app. Only contacts the appcast URL configured above.</li>
+        <li><strong>Apple media and spatial frameworks</strong> — system frameworks used for capture, encoding, playback, networking, and spatial presentation.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Changes to this policy</h2>
+    <p>Material changes will be announced in the release notes. This policy lives at <a href="https://in16guus.github.io/visiondeck-releases/privacy.html">in16guus.github.io/visiondeck-releases/privacy.html</a>.</p>
+
+    <h2>Contact</h2>
+    <p>Open an issue at <a href="https://github.com/in16guus/visiondeck-releases/issues">github.com/in16guus/visiondeck-releases/issues</a>.</p>
+</div>
+</body>
+</html>
