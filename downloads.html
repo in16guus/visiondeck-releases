@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VisionDeck — Download Mac Host</title>
+<style>
+:root { --bg: #0b0918; --fg: #f5f3ff; --muted: #b6b0e6; --accent: #6da8ff; --card: #17142f; --line: rgba(255,255,255,.12); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--fg); }
+.container { max-width: 840px; margin: 0 auto; padding: 48px 24px 80px; }
+h1 { max-width: 700px; font-size: clamp(42px, 7vw, 68px); line-height: .98; letter-spacing: -.055em; margin: 36px 0 18px; }
+.subtitle, p, li { color: var(--muted); }
+.subtitle { max-width: 620px; font-size: 20px; }
+h2 { font-size: 24px; margin: 42px 0 12px; }
+a { color: var(--accent); }
+.nav { margin-bottom: 32px; }
+.download { margin: 42px 0; padding: 28px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 18px; }
+.download h2 { margin: 0 0 6px; }
+.button { min-height: 52px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; background: #287bff; color: #fff; font-weight: 700; text-decoration: none; }
+ol, ul { padding-left: 24px; }
+li { margin-bottom: 10px; }
+code { padding: 2px 7px; background: var(--card); border-radius: 5px; color: var(--fg); }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin: 30px 0; overflow: hidden; background: var(--line); border: 1px solid var(--line); border-radius: 14px; }
+.facts div { padding: 20px; background: var(--card); }
+.facts strong { display: block; margin-bottom: 4px; }
+.facts span { color: var(--muted); font-size: 14px; }
+@media (max-width: 680px) { .download, .facts { grid-template-columns: 1fr; } .button { width: 100%; } }
+</style>
+</head>
+<body>
+<main class="container">
+    <div class="nav"><a href="index.html">← VisionDeck</a></div>
+    <h1>The free VisionDeck Mac Host.</h1>
+    <p class="subtitle">Required for the Vision Pro app. Signed with Developer ID, notarized by Apple, and updated through a signed Sparkle feed.</p>
+
+    <section class="download">
+        <div><h2>Latest public release</h2><p>Download the current version and its SHA-256 checksum from the official release repository.</p></div>
+        <a class="button" href="https://github.com/in16guus/visiondeck-releases/releases/latest">View latest release</a>
+    </section>
+
+    <div class="facts">
+        <div><strong>macOS 26.5+</strong><span>Apple silicon Mac</span></div>
+        <div><strong>Free companion</strong><span>No Mac subscription</span></div>
+        <div><strong>Local network</strong><span>No cloud relay</span></div>
+    </div>
+
+    <h2>Install</h2>
+    <ol>
+        <li>Open the downloaded <code>VisionDeck-1.0.0.dmg</code>.</li>
+        <li>Drag VisionDeck into Applications and launch it from there.</li>
+        <li>Grant Screen Recording when requested, then reopen VisionDeck if macOS asks.</li>
+        <li>Open VisionDeck on Apple Vision Pro and select the discovered Mac.</li>
+    </ol>
+
+    <h2>Verify the download</h2>
+    <p>Every release includes a <code>.sha256</code> file. In Terminal, run <code>shasum -a 256 VisionDeck-1.0.0.dmg</code> and compare the result. macOS also verifies the Developer ID signature and stapled notarization ticket before launch.</p>
+
+    <h2>Updates and rollback</h2>
+    <p>The Mac app checks the signed Sparkle appcast. Use <strong>VisionDeck ▸ Check for Updates…</strong> at any time. Older releases remain visible in the repository if support asks you to test a previous compatible host.</p>
+
+    <h2>Uninstall</h2>
+    <p>Quit VisionDeck and move it from Applications to the Trash. You can remove its Screen Recording permission in System Settings. See <a href="support.html">Support</a> for connection, permission, Gatekeeper, and update troubleshooting.</p>
+</main>
+</body>
+</html>

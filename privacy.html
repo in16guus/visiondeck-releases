@@ -27,7 +27,7 @@ hr { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 48px 0; }
     <div class="nav"><a href="index.html">← VisionDeck</a></div>
 
     <h1>Privacy</h1>
-    <p class="subtitle">Last updated: 2026-07-11.</p>
+    <p class="subtitle">Last updated: 2026-07-12.</p>
 
     <div class="summary">
         <h3>The short version</h3>
@@ -35,14 +35,14 @@ hr { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 48px 0; }
             <li>VisionDeck does not collect, sell, or send your data to us or to third parties.</li>
             <li>No telemetry. No analytics. No cloud account. No advertising.</li>
             <li>Frames stream directly from your Mac to your Vision Pro over local network. Nothing leaves your LAN.</li>
-            <li>The Mac app contacts GitHub Pages (this site) to check for updates. That's the only network traffic outside your LAN.</li>
+            <li>The Mac app contacts the public release feed for updates. The visionOS app contacts Apple's App Store only for VisionDeck Pro products and verified entitlement status.</li>
         </ul>
     </div>
 
     <h2>What data flows where</h2>
     <p><strong>Inside your LAN:</strong> the visionOS app discovers the Mac via Bonjour and connects to the host over TCP and UDP. Captured screen frames and Mac audio are encoded and streamed to the headset. Pointer, keyboard, layout, and focus updates flow back to the paired Mac. VisionDeck protects these application connections with TLS and DTLS using the secret established during pairing. Traffic is also protected by your local network's link security.</p>
 
-    <p><strong>Outside your LAN:</strong> the Mac app's Sparkle updater fetches the signed RSS appcast from the public <code>in16guus/visiondeck-releases</code> GitHub Release roughly once per day to see if a new version is available. The visionOS app makes no outbound network requests.</p>
+    <p><strong>Outside your LAN:</strong> the Mac app's Sparkle updater fetches the signed RSS appcast from the public <code>in16guus/visiondeck-releases</code> GitHub Release roughly once per day to see if a new version is available. On visionOS, Apple's StoreKit framework contacts the App Store to load subscription products, complete purchases, restore purchases, and verify the current VisionDeck Pro entitlement. VisionDeck has no purchase server and does not receive payment details.</p>
 
     <h2>What we store on your device</h2>
     <ul>
@@ -50,6 +50,7 @@ hr { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 48px 0; }
         <li>A custom-environment photo you opt to use, in the visionOS app's Application Support directory.</li>
         <li>The pairing secret in the operating system Keychain on both devices.</li>
         <li>Sparkle's update-check timestamp in <code>NSUserDefaults</code> on the Mac.</li>
+        <li>Your App Store transaction and entitlement records are maintained by Apple. VisionDeck reads Apple's cryptographically verified local result and does not upload it to VisionDeck servers.</li>
     </ul>
     <p>You can remove the custom photo from inside VisionDeck. Deleting the apps removes their local settings and files. The pairing secret is overwritten after you enter and successfully connect with a different pairing code; operating-system Keychain items may otherwise persist across reinstall.</p>
 
@@ -69,6 +70,7 @@ hr { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 48px 0; }
     <ul>
         <li><strong>Sparkle</strong> — auto-update framework for the Mac app. Only contacts the appcast URL configured above.</li>
         <li><strong>Apple media and spatial frameworks</strong> — system frameworks used for capture, encoding, playback, networking, and spatial presentation.</li>
+        <li><strong>Apple StoreKit</strong> — displays localized VisionDeck Pro offers and verifies purchases. Apple's handling of Apple Account and payment data is governed by Apple's privacy policy.</li>
     </ul>
 
     <hr>

@@ -29,6 +29,26 @@ hr { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 48px 0; }
     <h1>Support</h1>
     <p class="subtitle">Common issues, FAQs, and how to get help.</p>
 
+    <h2>What is included for free?</h2>
+    <p>VisionDeck Free includes one complete Mac display with full resolution, audio, pointer and keyboard input, every aspect-ratio option, move/resize/rotate/tilt/curve controls, visual clarity settings, and Apple system environments. Streaming quality and latency optimizations are never reduced for Free users.</p>
+
+    <h2>How does the 14-day Pro trial work?</h2>
+    <p>The trial does not start when you install or open VisionDeck. It begins only after you explicitly confirm an eligible monthly or yearly subscription in Apple's StoreKit purchase sheet. Apple determines eligibility once per subscription group and shows the exact trial and renewal terms before confirmation.</p>
+
+    <h2>Restore, manage, or cancel VisionDeck Pro</h2>
+    <ul>
+        <li>Attempt to add a second display, load Saved Workspaces, or select Custom Photo to open the VisionDeck Pro sheet.</li>
+        <li>Choose <strong>Restore Purchases</strong> after reinstalling or when using another Vision Pro with the same Apple Account.</li>
+        <li>Choose <strong>Manage Subscription</strong> to change or cancel the plan in Apple's system interface.</li>
+        <li>For refund requests, visit <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a>. VisionDeck never receives your payment details and cannot issue App Store refunds directly.</li>
+    </ul>
+
+    <h2>What happens when Pro expires?</h2>
+    <p>VisionDeck does not interrupt an open immersive workspace. When you exit the workspace or disconnect from the Mac, the app returns to one active display. Saved workspaces and Custom Photos remain stored locally but locked, so resubscribing restores access without deleting your setup. During Apple's 16-day Billing Grace Period, verified Pro access remains available.</p>
+
+    <h2>Does Family Sharing work?</h2>
+    <p>Both VisionDeck Pro plans support Family Sharing. Apple controls family eligibility and purchase sharing; each family member restores through their own Apple Account.</p>
+
     <h2>The Vision Pro doesn't find my Mac</h2>
     <p>The headset discovers the Mac via Bonjour on the local network. Check:</p>
     <ul>
@@ -41,7 +61,7 @@ hr { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 48px 0; }
     <h2>Screen Recording permission denied</h2>
     <p>VisionDeck needs Screen Recording to capture your displays. To grant:</p>
     <ol>
-        <li>Open <strong>System Settings ▸ Privacy & Security ▸ Screen Recording</strong>.</li>
+        <li>Open <strong>System Settings ▸ Privacy &amp; Security ▸ Screen Recording</strong>.</li>
         <li>Enable <strong>VisionDeck</strong> in the list.</li>
         <li>If the toggle is greyed out, click the lock and authenticate first.</li>
         <li>Return to VisionDeck. If macOS requests a relaunch, relaunch the app once.</li>
@@ -59,6 +79,7 @@ hr { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 48px 0; }
     <p>This shouldn't happen with the notarized DMG. If it does, the DMG may have been re-downloaded with a quarantine flag set incorrectly. Re-download from
        <a href="https://github.com/in16guus/visiondeck-releases/releases/latest">GitHub Releases</a>
        and re-install.</p>
+    <p>Use only the official <a href="downloads.html">VisionDeck download page</a>. Every public release includes a SHA-256 checksum and is expected to have a stapled Apple notarization ticket.</p>
 
     <h2>The host keeps re-prompting for Screen Recording</h2>
     <p>macOS ties the Screen Recording grant to the app's code signature. If you're running an unsigned build (built from source without Xcode auto-signing in), every rebuild changes the signature and re-prompts. Either:</p>
@@ -103,6 +124,13 @@ hr { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 48px 0; }
         <li>What you tried and what happened</li>
         <li>Any error messages in <strong>Console.app</strong> filtered by <code>VisionDeck</code></li>
     </ul>
+    <p><strong>Do not post your pairing code, private screen contents, Apple Account information, or unredacted logs containing personal data.</strong></p>
+
+    <h2>Report a security issue privately</h2>
+    <p>Do not open a public issue for a vulnerability. Use GitHub's <a href="https://github.com/in16guus/visiondeck-releases/security/advisories/new">private security advisory form</a> so details remain private while they are investigated.</p>
+
+    <hr>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="release-notes.html">Release Notes</a></p>
 </div>
 </body>
 </html>
