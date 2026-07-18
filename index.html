@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <title>VisionDeck — Your Mac. Beyond the desk.</title>
-  <meta name="description" content="VisionDeck brings up to five real Mac displays into Apple Vision Pro with private local streaming, spatial layouts, precise screen measurements, and saved workspaces.">
-  <meta property="og:title" content="VisionDeck — Your Mac. Beyond the desk.">
-  <meta property="og:description" content="A private spatial multi-display workspace for your Mac and Apple Vision Pro.">
-  <meta property="og:image" content="assets/product/visiondeck-hero-ai.webp">
+  <meta name="theme-color" content="#03060b">
+  <title>VisionDeck — Your Mac. Without the desk.</title>
+  <meta name="description" content="VisionDeck brings up to five real Mac displays into Apple Vision Pro with exact spatial control, focus-aware clarity, private local streaming, and low latency.">
+  <meta property="og:title" content="VisionDeck — Your Mac. Without the desk.">
+  <meta property="og:description" content="Up to five real Mac displays, arranged in space with exact size, distance, and curve.">
+  <meta property="og:image" content="assets/product/visiondeck-spatial-cinema-hero-2026.webp">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/brand/visiondeck-app-icon.png" type="image/png">
-  <link rel="preload" href="assets/product/visiondeck-hero-ai.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="site.css?v=20260718-3">
-  <script defer src="site.js?v=20260718-3"></script>
+  <link rel="preload" href="assets/product/visiondeck-spatial-cinema-hero-2026.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="site.css?v=20260718-6">
+  <script defer src="site.js?v=20260718-6"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,7 +32,7 @@
   <header class="site-header" data-header>
     <div class="nav-shell">
       <a class="brand" href="#top" aria-label="VisionDeck home">
-        <img src="assets/brand/visiondeck-app-icon.png" alt="" width="32" height="32">
+        <img src="assets/brand/visiondeck-app-icon.png" alt="" width="30" height="30">
         <span>VisionDeck</span>
       </a>
 
@@ -43,237 +43,211 @@
       </button>
 
       <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
-        <a href="#product">Product</a>
-        <a href="#workspaces">Workspaces</a>
-        <a href="#quality">Quality</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#privacy">Privacy</a>
-        <a href="support.html">Support</a>
-        <a class="nav-download" href="downloads.html">Download Mac Host</a>
+        <div class="nav-links">
+          <a href="#product">Product</a>
+          <a href="#experience">Experience</a>
+          <a href="#performance">Performance</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div class="nav-actions">
+          <a class="nav-host" href="downloads.html">Mac Host — Free</a>
+          <a class="nav-primary" href="https://github.com/in16guus/visiondeck-releases/releases" target="_blank" rel="noreferrer">Get launch updates</a>
+        </div>
       </nav>
     </div>
   </header>
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-shell page-shell">
+      <img class="hero-image" src="assets/product/visiondeck-spatial-cinema-hero-2026.webp" alt="A professional using Apple Vision Pro with five Mac displays arranged above an alpine lake at night" width="1672" height="941" fetchpriority="high">
+      <div class="page-shell hero-layout">
         <div class="hero-copy">
-          <h1 id="hero-title">Your Mac.<br>Beyond the desk.</h1>
-          <p>Up to five real Mac displays, placed anywhere around you. Fast, private, and built for Apple Vision Pro.</p>
+          <h1 id="hero-title">Your Mac.<br>Without the desk.</h1>
+          <p>Up to five real Mac displays, arranged in space with exact size, distance, and curve.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="downloads.html">
-              <img src="assets/icons/download.svg" alt="" width="19" height="19">
-              Download Mac Host
+            <a class="button button-primary" href="https://github.com/in16guus/visiondeck-releases/releases" target="_blank" rel="noreferrer">Get launch updates</a>
+            <a class="button button-ghost" href="#experience">
+              <img src="assets/icons/arrow-right.svg" alt="" width="18" height="18">
+              See how it works
             </a>
-            <span class="button button-secondary button-disabled" aria-label="VisionDeck for Vision Pro is coming to the App Store">Coming to the App Store</span>
           </div>
-          <p class="hero-note">Apple silicon Mac · Apple Vision Pro · Local network</p>
+          <p class="hero-note">Coming to the App Store · Apple Vision Pro + Apple silicon Mac</p>
         </div>
-
-        <figure class="hero-media" data-hero-media>
-          <img src="assets/product/visiondeck-hero-ai.webp" alt="Three Mac displays arranged in a curved VisionDeck workspace above an alpine lake" width="1672" height="941" fetchpriority="high">
-          <figcaption><span aria-hidden="true"></span> AI-enhanced presentation based on the real app</figcaption>
-        </figure>
       </div>
+      <p class="hero-disclosure">AI-enhanced presentation based on the real app</p>
+      <a class="hero-scroll" href="#experience" aria-label="Continue to the VisionDeck experience">
+        <span>Explore</span>
+        <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16">
+      </a>
     </section>
 
-    <section class="capability-section" id="product" aria-labelledby="capability-title">
-      <div class="page-shell capability-layout">
-        <div class="capability-heading reveal">
-          <h2 id="capability-title">One Mac. Up to five real displays.</h2>
-          <p>Arrange displays exactly how you think.</p>
-        </div>
-
-        <div class="capability-rail" aria-label="Workspace capabilities">
-          <article class="capability-item reveal">
-            <img src="assets/icons/device-desktop.svg" alt="" width="40" height="40">
-            <div><h3>Up to 5 displays</h3><p>Real Mac screens.</p></div>
-          </article>
-          <article class="capability-item reveal">
-            <img src="assets/icons/aspect-ratio.svg" alt="" width="40" height="40">
-            <div><h3>Flat, curved, or mixed</h3><p>Shape your space.</p></div>
-          </article>
-          <article class="capability-item reveal">
-            <img src="assets/icons/device-mobile.svg" alt="" width="40" height="40">
-            <div><h3>Portrait to ultrawide</h3><p>Any orientation.</p></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="precision-section section" id="workspaces" aria-labelledby="precision-title">
-      <div class="page-shell precision-layout">
-        <div class="precision-copy reveal">
-          <p class="section-label">Workspace control</p>
-          <h2 id="precision-title">Measure with precision.</h2>
-          <p>Place every screen where it feels natural, then refine its exact distance and rendered physical size. Screen measurements update live as you shape the workspace.</p>
-          <dl class="precision-facts">
-            <div><dt>Distance</dt><dd>1.00 m to 11.00 m</dd></div>
-            <div><dt>Physical size</dt><dd>Matched by real diagonal</dd></div>
-            <div><dt>Layouts</dt><dd>Flat, Curved, or Mixed</dd></div>
-          </dl>
-        </div>
-
-        <figure class="app-capture precision-capture reveal">
-          <img src="assets/product/visiondeck-workspace-measurements-2026.webp" alt="VisionDeck Workspace screen with exact distance, physical size, and saved workspace controls" width="2400" height="1350" loading="lazy">
-          <figcaption>Real visionOS capture · exact screen measurements with VisionDeck Pro</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="environment-section" aria-labelledby="environment-title">
-      <div class="environment-stage" data-environment-stage>
-        <img src="assets/product/visiondeck-lifestyle-ai.webp" alt="A professional using Apple Vision Pro at a desk overlooking an alpine lake" width="1672" height="941" loading="lazy" data-environment-image>
-      </div>
-      <div class="environment-shade" aria-hidden="true"></div>
-
-      <div class="page-shell environment-layout">
-        <div class="environment-copy reveal">
-          <p class="section-label">Focus your space</p>
-          <h2 id="environment-title">Set the scene.</h2>
-          <p>Keep your real desk in view, stay inside an Apple environment, or bring a 360° Custom Photo with you.</p>
-          <p class="environment-status" aria-live="polite" data-environment-status>Focused work · AI editorial scene</p>
-        </div>
-
-        <div class="environment-options reveal" role="tablist" aria-label="Environment presentation examples">
-          <button class="environment-option is-active" type="button" role="tab" aria-selected="true"
-            data-environment="assets/product/visiondeck-lifestyle-ai.webp"
-            data-environment-alt="A professional using Apple Vision Pro at a desk overlooking an alpine lake"
-            data-environment-caption="Focused work · AI editorial scene">
-            <img src="assets/product/visiondeck-lifestyle-ai.webp" alt="" width="140" height="84" loading="lazy">
-            <span>Focus</span>
-          </button>
-          <button class="environment-option" type="button" role="tab" aria-selected="false"
-            data-environment="assets/product/visiondeck-hero-ai.webp"
-            data-environment-alt="A curved VisionDeck display workspace in an alpine environment"
-            data-environment-caption="Spatial escape · AI-enhanced product presentation">
-            <img src="assets/product/visiondeck-hero-ai.webp" alt="" width="140" height="84" loading="lazy">
-            <span>Spatial</span>
-          </button>
-          <button class="environment-option" type="button" role="tab" aria-selected="false"
-            data-environment="assets/product/visiondeck-environments-2026.webp"
-            data-environment-alt="Real VisionDeck Environments screen with Apple Environment and Custom Photo options"
-            data-environment-caption="Environment controls · real visionOS capture">
-            <img src="assets/product/visiondeck-environments-2026.webp" alt="" width="140" height="84" loading="lazy">
-            <span>Controls</span>
+    <section class="film-section section-dark" id="experience" aria-labelledby="film-title">
+      <div class="page-shell film-layout">
+        <div class="film-copy reveal">
+          <p class="section-label">VisionDeck in action</p>
+          <h2 id="film-title">Spatial workspace.<br>Real Mac.<br>Zero compromise.</h2>
+          <p>Turn one Mac into your personal studio. Work in code, edit, write, design, or research—in the layout that fits the moment.</p>
+          <button class="text-action" type="button" data-tour-open>
+            <img src="assets/icons/arrow-right.svg" alt="" width="17" height="17">
+            Open the product tour
           </button>
         </div>
+
+        <button class="film-media reveal" type="button" data-tour-open aria-label="Open the VisionDeck product tour">
+          <img src="assets/product/visiondeck-spatial-cinema-film-2026.webp" alt="Five spatial Mac displays in a night studio with a professional using Apple Vision Pro" width="1672" height="941" loading="lazy">
+          <span class="film-control"><img src="assets/icons/arrow-right.svg" alt="" width="24" height="24"></span>
+          <span class="film-caption">Product tour · real interface captures</span>
+        </button>
       </div>
     </section>
 
-    <section class="workspace-story section" aria-labelledby="workspace-story-title">
-      <div class="page-shell story-layout">
-        <figure class="app-capture story-capture reveal">
-          <img src="assets/product/visiondeck-workspace-overview-2026.webp" alt="VisionDeck Workspace screen with screen measurements and saved workspace profiles" width="2400" height="1350" loading="lazy">
-          <figcaption>Real VisionDeck workspace · saved layouts restore the complete spatial desk</figcaption>
-        </figure>
-        <div class="story-copy reveal">
-          <p class="section-label">Saved workspaces</p>
-          <h2 id="workspace-story-title">Save, switch,<br>get back to work.</h2>
-          <p>Save the complete setup—screen count, aspect ratio, resolution, position, depth, size, rotation, tilt, and curve. Return to it with one tap.</p>
-          <ul class="check-list">
-            <li><img src="assets/icons/check.svg" alt="" width="18" height="18">Profiles sync directly between Mac and Vision Pro</li>
-            <li><img src="assets/icons/check.svg" alt="" width="18" height="18">Built-in starting layouts stay flexible</li>
-            <li><img src="assets/icons/check.svg" alt="" width="18" height="18">Physical displays remain visible by default</li>
+    <section class="display-section section-dark" id="product" aria-labelledby="display-title">
+      <div class="page-shell display-layout">
+        <div class="display-copy reveal">
+          <p class="section-label">Five displays</p>
+          <h2 id="display-title">Five displays.<br>One Mac.</h2>
+          <p>See more and do more without adding hardware. VisionDeck streams up to five real Mac displays over your local network.</p>
+          <ul class="quiet-list">
+            <li>Portrait to ultrawide</li>
+            <li>Flat, curved, or mixed</li>
+            <li>Audio and direct input</li>
           </ul>
         </div>
+
+        <figure class="cinema-frame reveal">
+          <img src="assets/product/visiondeck-hero-ai.webp" alt="Five Mac workspaces arranged in a curved spatial layout above an alpine lake" width="1672" height="941" loading="lazy">
+          <figcaption>AI-enhanced product presentation · based on VisionDeck’s real workspace behavior</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="quality-section section" id="quality" aria-labelledby="quality-title">
-      <div class="page-shell quality-layout">
-        <div class="quality-copy reveal">
-          <p class="section-label">Visual clarity</p>
-          <h2 id="quality-title">See every pixel.<br>Feel every frame.</h2>
-          <p>Sharpen small desktop text without adding a buffered frame. Optional mipmaps can reduce shimmer on strongly angled screens.</p>
-          <div class="quality-signals" aria-label="Display quality behavior">
-            <span>Text clarity</span><span>Angled screens</span><span>Focus-aware quality</span>
-          </div>
+    <section class="workspace-section section-dark" aria-labelledby="workspace-title">
+      <div class="page-shell workspace-layout">
+        <figure class="app-window app-window-dark reveal">
+          <img src="assets/product/visiondeck-workspace-measurements-2026.webp" alt="VisionDeck Workspace settings with exact distance, physical size, layout, and saved workspace controls" width="2400" height="1350" loading="lazy">
+          <figcaption>Real visionOS capture</figcaption>
+        </figure>
+
+        <div class="workspace-copy reveal">
+          <p class="section-label">Precise by design</p>
+          <h2 id="workspace-title">Your workspace.<br>Exactly how you want it.</h2>
+          <dl class="workspace-facts">
+            <div><dt>Distance</dt><dd>1–11 meters</dd></div>
+            <div><dt>Physical size</dt><dd>True-to-life scaling</dd></div>
+            <div><dt>Layouts</dt><dd>Flat, curved, or mixed</dd></div>
+            <div><dt>Workspaces</dt><dd>Save and restore every detail</dd></div>
+          </dl>
+          <p>Arrange, fine-tune, and return to the exact spatial desk you built. Screen count, aspect, resolution, depth, size, rotation, tilt, and curve are remembered.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="performance-section section-dark" id="performance" aria-labelledby="performance-title">
+      <div class="page-shell performance-layout">
+        <div class="performance-copy reveal">
+          <p class="section-label">Built for performance</p>
+          <h2 id="performance-title">Smooth, crisp,<br>and efficient.</h2>
+          <ul class="performance-list">
+            <li><img src="assets/icons/bolt.svg" alt="" width="24" height="24"><span><strong>Focus-aware 60 fps</strong>Rendering power follows your attention.</span></li>
+            <li><img src="assets/icons/layers-subtract.svg" alt="" width="24" height="24"><span><strong>Hardware HEVC Main10</strong>High-quality hardware encoding on Apple silicon.</span></li>
+            <li><img src="assets/icons/app-window.svg" alt="" width="24" height="24"><span><strong>H.264 fallback</strong>Compatibility when HEVC is unavailable.</span></li>
+            <li><img src="assets/icons/device-desktop.svg" alt="" width="24" height="24"><span><strong>Local network</strong>Your workspace stays on your LAN.</span></li>
+            <li><img src="assets/icons/adjustments-horizontal.svg" alt="" width="24" height="24"><span><strong>Low latency</strong>Responsive enough for real work.</span></li>
+          </ul>
         </div>
 
-        <figure class="app-capture quality-capture reveal">
-          <img src="assets/product/visiondeck-visuals-2026.webp" alt="VisionDeck Visuals screen with Text clarity and Angled screens settings" width="2400" height="1350" loading="lazy">
+        <div class="performance-route reveal" aria-label="VisionDeck local streaming route">
+          <div class="route-node">
+            <img src="assets/icons/device-desktop.svg" alt="" width="52" height="52">
+            <strong>Apple silicon Mac</strong>
+            <span>Capture + hardware encode</span>
+          </div>
+          <img class="route-arrow" src="assets/icons/arrow-right.svg" alt="" width="24" height="24">
+          <div class="route-node route-node-brand">
+            <img src="assets/brand/visiondeck-app-icon.png" alt="" width="64" height="64">
+            <strong>VisionDeck</strong>
+            <span>Private local stream</span>
+          </div>
+          <img class="route-arrow" src="assets/icons/arrow-right.svg" alt="" width="24" height="24">
+          <div class="route-node">
+            <img src="assets/icons/device-mobile.svg" alt="" width="52" height="52">
+            <strong>Apple Vision Pro</strong>
+            <span>Decode + spatial render</span>
+          </div>
+          <div class="route-meta"><span>HEVC Main10</span><span>H.264 fallback</span><span>Local network</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="clarity-section section-dark" aria-labelledby="clarity-title">
+      <div class="page-shell clarity-layout">
+        <div class="clarity-copy reveal">
+          <p class="section-label">Clarity where you look</p>
+          <h2 id="clarity-title">Focus-aware rendering.<br>Text Clarity.</h2>
+          <p>Keep small desktop text crisp without adding a buffered frame. Optional mipmaps can reduce shimmer on strongly angled screens.</p>
+          <div class="clarity-signals"><span>No buffered frame</span><span>GPU-conscious</span><span>Built for angled screens</span></div>
+        </div>
+
+        <figure class="app-window reveal">
+          <img src="assets/product/visiondeck-visuals-2026.webp" alt="VisionDeck Visuals settings with Text Clarity and Angled screens controls" width="2400" height="1350" loading="lazy">
           <figcaption>Real visionOS capture · visual controls designed to protect latency</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="privacy-band" id="privacy" aria-labelledby="privacy-title">
+    <section class="privacy-section" id="privacy" aria-labelledby="privacy-title">
       <div class="page-shell privacy-layout">
         <div class="privacy-heading reveal">
-          <p class="section-label">Why local</p>
-          <h2 id="privacy-title">Fast. Private. Yours.</h2>
+          <p class="section-label">Private by default</p>
+          <h2 id="privacy-title">Your workspace<br>stays yours.</h2>
         </div>
-        <div class="privacy-proofs">
-          <article class="reveal">
-            <img src="assets/icons/bolt.svg" alt="" width="34" height="34">
-            <div><h3>Low latency</h3><p>Hardware HEVC with H.264 fallback, streamed over your local network.</p></div>
-          </article>
-          <article class="reveal">
-            <img src="assets/icons/lock.svg" alt="" width="34" height="34">
-            <div><h3>Private by default</h3><p>No account, no cloud workspace, and no analytics.</p></div>
-          </article>
-          <article class="reveal">
-            <img src="assets/icons/shield-check.svg" alt="" width="34" height="34">
-            <div><h3>You stay in control</h3><p>Pair explicitly, choose when to connect, and keep your work on your network.</p></div>
-          </article>
-        </div>
+        <div class="privacy-proof reveal"><img src="assets/icons/lock.svg" alt="" width="32" height="32"><div><strong>No account.</strong><span>Start without signing in.</span></div></div>
+        <div class="privacy-proof reveal"><img src="assets/icons/shield-check.svg" alt="" width="32" height="32"><div><strong>No cloud workspace.</strong><span>Your Mac. Your network. Your space.</span></div></div>
+        <div class="privacy-proof reveal"><img src="assets/icons/adjustments-horizontal.svg" alt="" width="32" height="32"><div><strong>No analytics.</strong><span>We do not collect usage data.</span></div></div>
       </div>
     </section>
 
-    <section class="setup-section section" aria-labelledby="setup-title">
-      <div class="page-shell setup-layout">
-        <div class="setup-heading reveal">
-          <p class="section-label">How it works</p>
-          <h2 id="setup-title">Three simple steps.</h2>
-        </div>
-        <ol class="setup-steps">
-          <li class="reveal">
-            <span class="step-number">1</span>
-            <img src="assets/icons/device-desktop.svg" alt="" width="34" height="34">
-            <div><h3>Download</h3><p>Install the free VisionDeck Mac Host on your Apple silicon Mac.</p><a href="downloads.html">Download Mac Host <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16"></a></div>
-          </li>
-          <li class="reveal">
-            <span class="step-number">2</span>
-            <img src="assets/icons/app-window.svg" alt="" width="34" height="34">
-            <div><h3>Connect</h3><p>Open VisionDeck on Apple Vision Pro and pair once on your local network.</p></div>
-          </li>
-          <li class="reveal">
-            <span class="step-number">3</span>
-            <img src="assets/icons/adjustments-horizontal.svg" alt="" width="34" height="34">
-            <div><h3>Arrange</h3><p>Enter the workspace and place up to five real Mac displays.</p></div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="pricing-section section" id="pricing" aria-labelledby="pricing-title">
+    <section class="pricing-section section-dark" id="pricing" aria-labelledby="pricing-title">
       <div class="page-shell pricing-layout">
         <div class="pricing-heading reveal">
-          <p class="section-label">Pricing</p>
-          <h2 id="pricing-title">Simple pricing.<br>Built for power users.</h2>
-          <p>One complete Mac display is always free. Pro adds larger workspaces and reusable spatial setups.</p>
+          <p class="section-label">Honest pricing</p>
+          <h2 id="pricing-title">Simple pricing.<br>Powerful value.</h2>
+          <p>One complete Mac display is free. Upgrade only when your workspace grows.</p>
         </div>
 
         <div class="pricing-plans">
           <article class="price-plan reveal">
-            <header><div><h3>Free</h3><p>Everything needed for a focused spatial desk.</p></div><strong>$0</strong></header>
+            <div><h3>VisionDeck Free</h3><p>One complete spatial Mac display.</p></div>
+            <strong class="price">Free</strong>
             <ul>
-              <li><img src="assets/icons/check.svg" alt="" width="17" height="17">One complete Mac display</li>
-              <li><img src="assets/icons/check.svg" alt="" width="17" height="17">Full quality, audio, and direct input</li>
-              <li><img src="assets/icons/check.svg" alt="" width="17" height="17">All arrangement and visual controls</li>
+              <li><img src="assets/icons/check.svg" alt="" width="16" height="16">Full display quality</li>
+              <li><img src="assets/icons/check.svg" alt="" width="16" height="16">Audio and direct input</li>
+              <li><img src="assets/icons/check.svg" alt="" width="16" height="16">All core controls</li>
             </ul>
-            <span class="plan-note">Free forever</span>
+            <span class="plan-action plan-action-muted">Coming to the App Store</span>
           </article>
 
           <article class="price-plan price-plan-pro reveal">
-            <header><div><h3>Pro</h3><p>For multi-display work and reusable setups.</p></div><strong>14 days free</strong></header>
+            <div class="plan-title-row"><div><h3>VisionDeck Pro</h3><p>Up to five displays and advanced controls.</p></div><span>14-day trial</span></div>
+            <div class="price-stack"><strong>$7.99 <small>/ month</small></strong><strong>$59.99 <small>/ year</small></strong></div>
             <ul>
-              <li><img src="assets/icons/check.svg" alt="" width="17" height="17">Two to five Mac displays</li>
-              <li><img src="assets/icons/check.svg" alt="" width="17" height="17">Saved workspaces and exact measurements</li>
-              <li><img src="assets/icons/check.svg" alt="" width="17" height="17">Custom Photo environments and Family Sharing</li>
+              <li><img src="assets/icons/check.svg" alt="" width="16" height="16">Two to five Mac displays</li>
+              <li><img src="assets/icons/check.svg" alt="" width="16" height="16">Saved workspaces and exact measurements</li>
+              <li><img src="assets/icons/check.svg" alt="" width="16" height="16">Custom Photo environments and Family Sharing</li>
             </ul>
-            <div class="plan-prices"><span><strong>$7.99</strong> / month</span><span><strong>$59.99</strong> / year</span></div>
+            <span class="plan-action plan-action-primary">Start the free trial at launch</span>
+          </article>
+
+          <article class="price-plan reveal">
+            <div><h3>Mac Host</h3><p>Run VisionDeck on your Apple silicon Mac.</p></div>
+            <strong class="price">Free</strong>
+            <ul>
+              <li><img src="assets/icons/check.svg" alt="" width="16" height="16">No subscription required</li>
+              <li><img src="assets/icons/check.svg" alt="" width="16" height="16">Private local pairing</li>
+              <li><img src="assets/icons/check.svg" alt="" width="16" height="16">Signed update channel</li>
+            </ul>
+            <a class="plan-action" href="downloads.html">Download Mac Host</a>
           </article>
         </div>
       </div>
@@ -281,12 +255,13 @@
     </section>
 
     <section class="closing-section" aria-labelledby="closing-title">
+      <div class="closing-media" aria-hidden="true"><img src="assets/product/visiondeck-spatial-cinema-hero-2026.webp" alt="" width="1672" height="941" loading="lazy"></div>
       <div class="page-shell closing-layout reveal">
-        <div><h2 id="closing-title">Your Mac.<br>Beyond the desk.</h2><p>Ready when you are.</p></div>
+        <h2 id="closing-title">Your Mac. Without the desk.</h2>
+        <p>A better way to work in spatial computing. Be first in line when VisionDeck launches on the App Store.</p>
         <div class="closing-actions">
-          <a class="button button-light" href="downloads.html"><img src="assets/icons/download.svg" alt="" width="19" height="19">Download Mac Host</a>
-          <span class="button button-white button-disabled">Coming to the App Store</span>
-          <small>Apple silicon Mac · Apple Vision Pro · Local network</small>
+          <a class="button button-primary" href="https://github.com/in16guus/visiondeck-releases/releases" target="_blank" rel="noreferrer">Get launch updates</a>
+          <a class="button button-ghost" href="downloads.html">Mac Host — Free</a>
         </div>
       </div>
     </section>
@@ -295,14 +270,56 @@
   <footer class="site-footer">
     <div class="page-shell footer-main">
       <a class="brand brand-on-dark" href="#top" aria-label="VisionDeck home">
-        <img src="assets/brand/visiondeck-app-icon.png" alt="" width="32" height="32">
+        <img src="assets/brand/visiondeck-app-icon.png" alt="" width="30" height="30">
         <span>VisionDeck</span>
       </a>
       <nav aria-label="Footer">
-        <a href="#product">Product</a><a href="#workspaces">Workspaces</a><a href="#quality">Quality</a><a href="#pricing">Pricing</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="terms.html">Terms</a><a href="release-notes.html">Release notes</a>
+        <a href="#product">Product</a>
+        <a href="#experience">Experience</a>
+        <a href="#performance">Performance</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#pricing">Pricing</a>
+        <a href="downloads.html">Mac Host</a>
+        <a href="support.html">Support</a>
+        <a href="terms.html">Terms</a>
       </nav>
     </div>
-    <div class="page-shell footer-legal"><span>© 2026 VisionDeck</span><span>VisionDeck is an independent product and is not affiliated with Apple Inc. Apple, Mac, Apple Vision Pro, macOS, and visionOS are trademarks of Apple Inc.</span></div>
+    <div class="page-shell footer-legal">
+      <span>© 2026 VisionDeck</span>
+      <span>VisionDeck is an independent product and is not affiliated with Apple Inc. Apple, Mac, Apple Vision Pro, macOS, and visionOS are trademarks of Apple Inc.</span>
+    </div>
   </footer>
+
+  <dialog class="product-tour" data-tour-dialog aria-labelledby="tour-title">
+    <div class="tour-shell">
+      <header>
+        <div><span>VisionDeck product tour</span><h2 id="tour-title">The real app, feature by feature.</h2></div>
+        <button class="tour-close" type="button" data-tour-close aria-label="Close product tour"><img src="assets/icons/x.svg" alt="" width="22" height="22"></button>
+      </header>
+
+      <div class="tour-stage">
+        <article class="tour-slide is-active" data-tour-slide>
+          <img src="assets/product/visiondeck-workspace-overview-2026.webp" alt="VisionDeck Workspace overview" width="2400" height="1350">
+          <div><strong>Build the spatial desk</strong><span>Choose the count, layout, distance, and real rendered size.</span></div>
+        </article>
+        <article class="tour-slide" data-tour-slide hidden>
+          <img src="assets/product/visiondeck-environments-2026.webp" alt="VisionDeck Environment settings" width="2400" height="1350">
+          <div><strong>Choose the world around it</strong><span>Stay in passthrough, use an Apple environment, or add a Custom Photo.</span></div>
+        </article>
+        <article class="tour-slide" data-tour-slide hidden>
+          <img src="assets/product/visiondeck-visuals-2026.webp" alt="VisionDeck Visuals settings" width="2400" height="1350">
+          <div><strong>Tune clarity without adding delay</strong><span>Sharpen small text and reduce shimmer on angled screens.</span></div>
+        </article>
+      </div>
+
+      <footer>
+        <div class="tour-progress" aria-live="polite" data-tour-progress>1 / 3</div>
+        <div class="tour-controls">
+          <button type="button" data-tour-prev>Previous</button>
+          <button type="button" data-tour-next>Next <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16"></button>
+        </div>
+      </footer>
+    </div>
+  </dialog>
 </body>
 </html>

@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 const header = document.querySelector('[data-header]');
 const menuToggle = document.querySelector('[data-menu-toggle]');
 const nav = document.querySelector('[data-nav]');
@@ -7,80 +9,113 @@ const updateHeader = () => header?.classList.toggle('scrolled', window.scrollY >
 updateHeader();
 window.addEventListener('scroll', updateHeader, { passive: true });
 
-const closeMenu = () => {
-  menuToggle?.setAttribute('aria-expanded', 'false');
-  nav?.classList.remove('open');
-  document.body.classList.remove('menu-open');
+const setMenuOpen = (open) => {
+  menuToggle?.setAttribute('aria-expanded', String(open));
+  nav?.classList.toggle('open', open);
+  header?.classList.toggle('menu-active', open);
+  document.body.classList.toggle('menu-open', open);
+
   const label = menuToggle?.querySelector('.sr-only');
-  if (label) label.textContent = 'Open navigation';
+  if (label) label.textContent = open ? 'Close navigation' : 'Open navigation';
 };
 
 menuToggle?.addEventListener('click', () => {
-  const open = menuToggle.getAttribute('aria-expanded') !== 'true';
-  menuToggle.setAttribute('aria-expanded', String(open));
-  nav?.classList.toggle('open', open);
-  document.body.classList.toggle('menu-open', open);
-  const label = menuToggle.querySelector('.sr-only');
-  if (label) label.textContent = open ? 'Close navigation' : 'Open navigation';
+  setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
 });
 
-nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-window.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') closeMenu();
-});
+nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuOpen(false)));
 
-const environmentImage = document.querySelector('[data-environment-image]');
-const environmentStatus = document.querySelector('[data-environment-status]');
-const environmentOptions = [...document.querySelectorAll('[data-environment]')];
-
-environmentOptions.forEach((button) => {
-  const preload = new Image();
-  preload.src = button.dataset.environment;
-
-  button.addEventListener('click', () => {
-    if (!environmentImage || button.classList.contains('is-active')) return;
-
-    environmentOptions.forEach((item) => {
-      const active = item === button;
-      item.classList.toggle('is-active', active);
-      item.setAttribute('aria-selected', String(active));
-    });
-
-    environmentImage.classList.add('is-switching');
-    const nextImage = new Image();
-    nextImage.onload = () => {
-      environmentImage.src = button.dataset.environment;
-      environmentImage.alt = button.dataset.environmentAlt;
-      environmentImage.classList.remove('is-switching');
-    };
-    nextImage.src = button.dataset.environment;
-
-    if (environmentStatus) environmentStatus.textContent = button.dataset.environmentCaption;
-  });
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1180) setMenuOpen(false);
 });
 
 const revealItems = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window && !reducedMotion.matches) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
     });
   }, { rootMargin: '0px 0px -7% 0px', threshold: 0.08 });
+
   revealItems.forEach((item) => observer.observe(item));
 } else {
   revealItems.forEach((item) => item.classList.add('is-visible'));
 }
 
-const heroMedia = document.querySelector('[data-hero-media]');
-const precisePointer = window.matchMedia('(pointer: fine)');
-if (heroMedia && precisePointer.matches && !reducedMotion.matches) {
-  window.addEventListener('pointermove', (event) => {
-    const x = (event.clientX / window.innerWidth - 0.5) * 6;
-    const y = (event.clientY / window.innerHeight - 0.5) * 5;
-    heroMedia.style.setProperty('--hero-x', `${x}px`);
-    heroMedia.style.setProperty('--hero-y', `${y}px`);
-  }, { passive: true });
-}
+const tourDialog = document.querySelector('[data-tour-dialog]');
+const tourOpeners = [...document.querySelectorAll('[data-tour-open]')];
+const tourClose = document.querySelector('[data-tour-close]');
+const tourPrevious = document.querySelector('[data-tour-prev]');
+const tourNext = document.querySelector('[data-tour-next]');
+const tourProgress = document.querySelector('[data-tour-progress]');
+const tourSlides = [...document.querySelectorAll('[data-tour-slide]')];
+let tourIndex = 0;
+let tourOpener = null;
+
+const renderTour = () => {
+  tourSlides.forEach((slide, index) => {
+    const active = index === tourIndex;
+    slide.hidden = !active;
+    slide.classList.toggle('is-active', active);
+  });
+
+  if (tourProgress) tourProgress.textContent = `${tourIndex + 1} / ${tourSlides.length}`;
+};
+
+const showTour = (opener) => {
+  if (!tourDialog || typeof tourDialog.showModal !== 'function') return;
+  tourOpener = opener;
+  tourIndex = 0;
+  renderTour();
+  tourDialog.showModal();
+  document.body.classList.add('tour-open');
+};
+
+const closeTour = () => {
+  if (tourDialog?.open) tourDialog.close();
+};
+
+tourOpeners.forEach((opener) => opener.addEventListener('click', () => showTour(opener)));
+tourClose?.addEventListener('click', closeTour);
+
+tourPrevious?.addEventListener('click', () => {
+  tourIndex = (tourIndex - 1 + tourSlides.length) % tourSlides.length;
+  renderTour();
+});
+
+tourNext?.addEventListener('click', () => {
+  tourIndex = (tourIndex + 1) % tourSlides.length;
+  renderTour();
+});
+
+tourDialog?.addEventListener('click', (event) => {
+  if (event.target === tourDialog) closeTour();
+});
+
+tourDialog?.addEventListener('close', () => {
+  document.body.classList.remove('tour-open');
+  tourOpener?.focus();
+  tourOpener = null;
+});
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && menuToggle?.getAttribute('aria-expanded') === 'true') {
+    setMenuOpen(false);
+    menuToggle.focus();
+    return;
+  }
+
+  if (!tourDialog?.open) return;
+  if (event.key === 'ArrowLeft') {
+    tourIndex = (tourIndex - 1 + tourSlides.length) % tourSlides.length;
+    renderTour();
+  }
+  if (event.key === 'ArrowRight') {
+    tourIndex = (tourIndex + 1) % tourSlides.length;
+    renderTour();
+  }
+});
+
+renderTour();
