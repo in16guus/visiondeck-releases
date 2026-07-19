@@ -9,8 +9,8 @@
   --muted-strong: #bac2ce;
   --line: rgba(255, 255, 255, 0.13);
   --line-strong: rgba(255, 255, 255, 0.22);
-  --blue: #176fff;
-  --blue-bright: #3d84ff;
+  --blue: #0f65f5;
+  --blue-bright: #166cf5;
   --blue-deep: #095ce8;
   --success: #53d681;
   --radius-sm: 10px;
@@ -200,9 +200,9 @@ figure { margin: 0; }
 .product-tour { width: min(1120px, calc(100vw - 40px)); max-height: calc(100svh - 40px); padding: 0; overflow: hidden; border: 1px solid var(--line-strong); border-radius: 20px; background: #070a0f; color: var(--white); box-shadow: 0 42px 140px rgba(0, 0, 0, 0.72); }
 .product-tour::backdrop { background: rgba(0, 0, 0, 0.78); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
 .tour-shell { max-height: calc(100svh - 40px); overflow: auto; }
-.tour-shell > header { padding: 22px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--line); }
-.tour-shell > header span { color: #7aaaff; font-size: 9px; font-weight: 740; letter-spacing: 0.1em; text-transform: uppercase; }
-.tour-shell > header h2 { margin: 6px 0 0; font-size: 25px; letter-spacing: -0.04em; }
+.tour-header { padding: 22px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--line); }
+.tour-header span { color: #7aaaff; font-size: 9px; font-weight: 740; letter-spacing: 0.1em; text-transform: uppercase; }
+.tour-header h2 { margin: 6px 0 0; font-size: 25px; letter-spacing: -0.04em; }
 .tour-close { flex: none; width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: transparent; cursor: pointer; }
 .tour-close img { width: 21px; height: 21px; filter: brightness(0) invert(1); }
 .tour-stage { padding: 20px 24px; }
@@ -212,7 +212,7 @@ figure { margin: 0; }
 .tour-slide > div { padding: 15px 17px; display: flex; justify-content: space-between; gap: 24px; background: #0b0e14; }
 .tour-slide strong { color: var(--white-pure); font-size: 13px; }
 .tour-slide span { color: var(--muted); font-size: 11px; text-align: right; }
-.tour-shell > footer { padding: 0 24px 22px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.tour-footer { padding: 0 24px 22px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .tour-progress { color: var(--muted); font-size: 11px; }
 .tour-controls { display: flex; gap: 8px; }
 .tour-controls button { min-height: 44px; padding: 0 14px; display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); border-radius: 8px; background: transparent; font-size: 11px; font-weight: 660; cursor: pointer; }
@@ -300,10 +300,10 @@ figure { margin: 0; }
   .closing-actions { display: grid; }
   .product-tour { width: calc(100vw - 18px); max-height: calc(100svh - 18px); border-radius: 14px; }
   .tour-shell { max-height: calc(100svh - 18px); }
-  .tour-shell > header, .tour-stage { padding: 16px; }
+  .tour-header, .tour-stage { padding: 16px; }
   .tour-slide > div { display: grid; gap: 6px; }
   .tour-slide span { text-align: left; }
-  .tour-shell > footer { padding: 0 16px 16px; }
+  .tour-footer { padding: 0 16px 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
