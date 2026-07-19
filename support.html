@@ -1,150 +1,280 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VisionDeck — Support</title>
-<link rel="icon" href="favicon.png" type="image/png">
-<style>
-:root { --bg: #0b0918; --fg: #f5f3ff; --muted: #b6b0e6; --accent: #a78bfa; --card: #1a153a; }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--fg); padding: 0; }
-.container { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
-h1 { font-size: 40px; margin-bottom: 8px; color: var(--accent); }
-.subtitle { color: var(--muted); margin-bottom: 40px; }
-h2 { font-size: 22px; margin: 40px 0 8px; }
-h3 { font-size: 17px; margin: 24px 0 8px; color: var(--accent); }
-p, li { color: var(--muted); margin-bottom: 12px; }
-code { background: var(--card); padding: 2px 8px; border-radius: 4px; font-family: "SF Mono", monospace; font-size: 14px; color: var(--fg); }
-pre { background: var(--card); padding: 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; }
-a { color: var(--accent); }
-ul { padding-left: 24px; margin-bottom: 16px; }
-hr { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 48px 0; }
-.nav { margin-bottom: 32px; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#03060b">
+  <meta name="color-scheme" content="dark">
+  <title>VisionDeck Support — Setup, Quality, and Troubleshooting</title>
+  <meta name="description" content="Set up VisionDeck, solve pairing and Screen Recording issues, tune clarity and latency, manage Pro, and get private security support.">
+  <link rel="canonical" href="https://in16guus.github.io/visiondeck-releases/support.html">
+  <meta property="og:title" content="VisionDeck Support">
+  <meta property="og:description" content="Fast answers for setup, streaming quality, subscriptions, updates, and troubleshooting.">
+  <meta property="og:url" content="https://in16guus.github.io/visiondeck-releases/support.html">
+  <meta property="og:image" content="https://in16guus.github.io/visiondeck-releases/assets/product/visiondeck-visuals-2026.webp">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/visiondeck-app-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/brand/visiondeck-app-icon.png">
+  <link rel="stylesheet" href="site.css?v=20260720-5">
+  <link rel="stylesheet" href="secondary.css?v=20260720-5">
+  <script defer src="site.js?v=20260720-5"></script>
 </head>
-<body>
-<div class="container">
-    <div class="nav"><a href="index.html">← VisionDeck</a></div>
+<body class="secondary-page">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <h1>Support</h1>
-    <p class="subtitle">Common issues, FAQs, and how to get help.</p>
+  <header class="site-header" data-header>
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="VisionDeck home">
+        <img src="assets/brand/visiondeck-app-icon.png" alt="" width="30" height="30">
+        <span>VisionDeck</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+        <span class="sr-only">Open navigation</span>
+        <img class="menu-open-icon" src="assets/icons/menu-2.svg" alt="" width="24" height="24">
+        <img class="menu-close-icon" src="assets/icons/x.svg" alt="" width="24" height="24">
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+        <div class="nav-links">
+          <a href="index.html#product">Product</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#performance">Performance</a>
+          <a href="index.html#privacy">Privacy</a>
+          <a href="index.html#pricing">Pricing</a>
+        </div>
+        <div class="nav-actions">
+          <a class="nav-host" href="downloads.html">Mac Host — Free</a>
+          <a class="nav-primary" href="https://github.com/in16guus/visiondeck-releases/issues/new/choose" target="_blank" rel="noreferrer">Get help</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-    <h2>What is included for free?</h2>
-    <p>VisionDeck Free includes one complete Mac display with full resolution, audio, pointer and keyboard input, every aspect-ratio option, move/resize/rotate/tilt/curve controls, visual clarity settings, and Apple system environments. Streaming quality and latency optimizations are never reduced for Free users.</p>
+  <main class="secondary-main" id="main">
+    <section class="subpage-hero" aria-labelledby="page-title">
+      <div class="page-shell subpage-hero-layout">
+        <div class="subpage-hero-copy">
+          <p class="subpage-kicker">VisionDeck support</p>
+          <h1 id="page-title">Answers that get you back into flow.</h1>
+          <p class="subpage-lede">Start with the symptom. Each path is written to restore a secure, sharp, low-latency workspace without guesswork.</p>
+        </div>
+        <aside class="hero-status" aria-label="Support safety reminder">
+          <div class="status-label"><img src="assets/icons/shield-check.svg" alt="" width="20" height="20"> Share safely</div>
+          <p>Never post pairing codes, private screen contents, Apple Account information, or unredacted logs in a public issue.</p>
+          <a class="button button-ghost" href="#contact">Choose a support channel</a>
+        </aside>
+      </div>
+    </section>
 
-    <h2>How does the 14-day Pro trial work?</h2>
-    <p>The trial does not start when you install or open VisionDeck. It begins only after you explicitly confirm an eligible monthly or yearly subscription in Apple's StoreKit purchase sheet. Apple determines eligibility once per subscription group and shows the exact trial and renewal terms before confirmation.</p>
+    <div class="secondary-tabs-wrap">
+      <nav class="page-shell secondary-tabs" aria-label="Resources">
+        <a href="downloads.html">Mac Host</a>
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="release-notes.html">Release notes</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
 
-    <h2>Restore, manage, or cancel VisionDeck Pro</h2>
-    <ul>
-        <li>Attempt to add a second display, load Saved Workspaces, or select Custom Photo to open the VisionDeck Pro sheet.</li>
-        <li>Choose <strong>Restore Purchases</strong> after reinstalling or when using another Vision Pro with the same Apple Account.</li>
-        <li>Choose <strong>Manage Subscription</strong> to change or cancel the plan in Apple's system interface.</li>
-        <li>For refund requests, visit <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a>. VisionDeck never receives your payment details and cannot issue App Store refunds directly.</li>
-    </ul>
+    <section class="secondary-content">
+      <div class="page-shell article-stack">
+        <nav class="quick-links" aria-label="Quick support paths">
+          <a class="quick-link" href="#connection"><img src="assets/icons/device-desktop.svg" alt="" width="24" height="24"><span>Pairing &amp; permissions</span></a>
+          <a class="quick-link" href="#quality"><img src="assets/icons/adjustments-horizontal.svg" alt="" width="24" height="24"><span>Clarity &amp; latency</span></a>
+          <a class="quick-link" href="#pro"><img src="assets/icons/layers-subtract.svg" alt="" width="24" height="24"><span>VisionDeck Pro</span></a>
+          <a class="quick-link" href="#contact"><img src="assets/icons/shield-check.svg" alt="" width="24" height="24"><span>Contact &amp; security</span></a>
+        </nav>
 
-    <h2>What happens when Pro expires?</h2>
-    <p>VisionDeck does not interrupt an open immersive workspace. When you exit the workspace or disconnect from the Mac, the app returns to one active display. Saved workspaces and Custom Photos remain stored locally but locked, so resubscribing restores access without deleting your setup. During Apple's 16-day Billing Grace Period, verified Pro access remains available.</p>
+        <div class="secondary-layout">
+          <aside class="page-toc" aria-label="Support topics">
+            <p>Support topics</p>
+            <nav>
+              <a href="#connection">Connection</a>
+              <a href="#quality">Picture &amp; latency</a>
+              <a href="#audio">Audio</a>
+              <a href="#pro">VisionDeck Pro</a>
+              <a href="#workspaces">Workspaces</a>
+              <a href="#updates">Install &amp; updates</a>
+              <a href="#contact">Get help</a>
+            </nav>
+          </aside>
 
-    <h2>Does Family Sharing work?</h2>
-    <p>Both VisionDeck Pro plans support Family Sharing. Apple controls family eligibility and purchase sharing; each family member restores through their own Apple Account.</p>
+          <div class="article-stack">
+            <section class="support-card" id="connection">
+              <h2>Connection and first run</h2>
+              <div class="support-question">
+                <h3>Vision Pro does not find the Mac</h3>
+                <ul>
+                  <li>Put both devices on the <strong>same local network</strong>. A Mac connected by Ethernet is fine when the router permits local-device traffic.</li>
+                  <li>Confirm VisionDeck is running on the Mac. The menu-bar status should say <strong>Waiting for Vision Pro…</strong> or show a connected headset.</li>
+                  <li>Allow incoming connections if the macOS firewall asks. Guest networks, enterprise client isolation, and “AP isolation” can block Bonjour discovery.</li>
+                  <li>Try a personal hotspot once. If discovery works there, the original router or network policy is the cause.</li>
+                </ul>
+              </div>
+              <div class="support-question">
+                <h3>Screen Recording permission is missing or denied</h3>
+                <ol>
+                  <li>Open <strong>System Settings ▸ Privacy &amp; Security ▸ Screen Recording</strong>.</li>
+                  <li>Enable <strong>VisionDeck</strong>. Authenticate if macOS locks the control.</li>
+                  <li>Return to VisionDeck and relaunch once only if macOS requests it.</li>
+                </ol>
+                <p>If VisionDeck is absent from the list, choose <strong>Grant Screen Recording Access</strong> in the Mac app to open the system flow.</p>
+              </div>
+              <div class="support-question">
+                <h3>The screen stays black or on a placeholder</h3>
+                <ul>
+                  <li>Check that the Mac Host says it is actively streaming.</li>
+                  <li>Confirm Screen Recording permission still exists for the installed copy in Applications.</li>
+                  <li>Disconnect and reconnect once after a monitor topology change or Mac wake.</li>
+                  <li>Quit and reopen the Vision Pro app if the stream state is stale.</li>
+                </ul>
+              </div>
+            </section>
 
-    <h2>How do Saved Workspaces sync?</h2>
-    <p>While the Mac and Vision Pro are paired, VisionDeck synchronizes saved workspace profiles directly over the same encrypted local connection used by the session. A profile includes the screen count, aspect ratios, resolutions, positions, distances, sizes, rotations, tilt and curve. Deleting or renaming a profile on either device is reflected on the other device after they reconnect. No profile is uploaded to a VisionDeck cloud service.</p>
+            <section class="support-card" id="quality">
+              <h2>Clarity, foveation, and the lowest practical latency</h2>
+              <div class="support-question">
+                <h3>Start with Standard mode—not Maximum Quality</h3>
+                <p>Standard mode is the tuned default: it caps the long edge at the latency-calibrated 1080p/1440p range, keeps the focused screen at full cadence, and spends less encode and decode work on peripheral screens. <strong>Maximum Quality</strong> lifts the ceiling to 4K and can look sharper, but it also increases hardware encode time, bandwidth, and headset decode work.</p>
+              </div>
+              <div class="support-question">
+                <h3>Make text clearer without adding a frame of delay</h3>
+                <ul>
+                  <li>On Vision Pro, open <strong>Visuals</strong> and keep <strong>Sharpen small text</strong> enabled. Begin near the default strength and raise it only until text edges are clear without halos.</li>
+                  <li>Move a screen slightly closer or reduce its physical size before enabling Maximum Quality. More pixels per visible degree often produces a bigger clarity gain than a heavier stream.</li>
+                  <li>Use a Mac display resolution appropriate for the screen’s spatial size. Extremely high source resolution on a small distant plane wastes encoder work.</li>
+                </ul>
+              </div>
+              <div class="support-question">
+                <h3>What “foveated” means in VisionDeck</h3>
+                <p>VisionDeck never receives raw eye-tracking data. It uses the active screen and a privacy-preserving head-direction estimate with hysteresis to keep the screen you are working on in the focused quality tier while reducing peripheral bitrate and cadence. This is foveated <em>stream allocation</em> across screens—not a blurry low-resolution patch inside the focused display.</p>
+              </div>
+              <div class="support-question">
+                <h3>Performance feels stuttery</h3>
+                <ul>
+                  <li>Leave Maximum Quality off, then reduce a peripheral screen’s source resolution or active display count.</li>
+                  <li>Keep the Mac near the router and prefer a clean 5 GHz, 6 GHz, Wi-Fi 6, or Wi-Fi 6E link where supported.</li>
+                  <li>Avoid guest networks, VPN routes that capture local traffic, and congested 2.4 GHz channels.</li>
+                  <li>Check the stream-health view for packet loss, RTT, stale frames, and decode spikes before changing several settings at once.</li>
+                </ul>
+              </div>
+            </section>
 
-    <h2>How do I match screen distance and physical size?</h2>
-    <p>VisionDeck Pro adds <strong>Precision Layout</strong> to the Mac host. Select one or more screens, enter a distance in metres, and choose a percentage of the largest common physical display size. Selecting multiple screens applies an identical distance and diagonal size to all of them in Flat, Curved, or Mixed mode. The measurements update while you move or resize a screen on Vision Pro.</p>
+            <section class="support-card" id="audio">
+              <h2>Audio</h2>
+              <div class="support-question">
+                <h3>Audio crackles or briefly drops out</h3>
+                <ul>
+                  <li>Confirm the local network is strong and low-loss; avoid congested 2.4 GHz and isolated guest networks.</li>
+                  <li>Temporarily reduce active display count to separate network saturation from an audio-device problem.</li>
+                  <li>Disconnect Bluetooth audio devices from the Mac and test the built-in output once.</li>
+                  <li>If crackling repeats several times per second, stop using that build and file an issue with a timestamp and redacted Console logs. Repeated crackling does not meet the release quality gate.</li>
+                </ul>
+              </div>
+            </section>
 
-    <h2>A connected physical monitor is missing</h2>
-    <ul>
-        <li>Confirm the monitor is active in <strong>System Settings ▸ Displays</strong>, then leave VisionDeck open for a moment while macOS reports the topology change.</li>
-        <li>Disconnect and reconnect the VisionDeck session once if the monitor was attached while the Mac was asleep.</li>
-        <li>VisionDeck Pro includes every active physical Mac display up to the five-screen workspace limit. Free mode remains limited to one display.</li>
-    </ul>
+            <section class="support-card" id="pro">
+              <h2>VisionDeck Free and Pro</h2>
+              <div class="support-question">
+                <h3>What is included for free?</h3>
+                <p>VisionDeck Free includes one complete Mac display with resolution, audio, pointer and keyboard input, aspect-ratio choices, spatial controls, visual clarity settings, and Apple system-environment coexistence. Streaming quality and latency optimizations are not reduced for Free users.</p>
+              </div>
+              <div class="support-question">
+                <h3>How does the 14-day trial work?</h3>
+                <p>The trial starts only after an eligible user confirms a monthly or yearly subscription in Apple’s StoreKit purchase sheet. Apple determines eligibility and shows the exact trial, localized price, and renewal terms before confirmation.</p>
+              </div>
+              <div class="support-question">
+                <h3>Restore, manage, cancel, or request a refund</h3>
+                <ul>
+                  <li>Open the Pro sheet by choosing a Pro feature, then select <strong>Restore Purchases</strong> after reinstalling or moving to another Vision Pro with the same Apple Account.</li>
+                  <li>Select <strong>Manage Subscription</strong> to change or cancel in Apple’s system interface.</li>
+                  <li>Use <a href="https://reportaproblem.apple.com/" target="_blank" rel="noreferrer">reportaproblem.apple.com</a> for refund requests. VisionDeck does not receive payment details and cannot issue App Store refunds.</li>
+                </ul>
+              </div>
+              <div class="support-question">
+                <h3>What happens when Pro access ends?</h3>
+                <p>An open immersive workspace is not interrupted. After exiting or disconnecting, VisionDeck returns to one active display. Saved workspaces and Custom Photos remain stored locally but locked, so renewed access restores them. Verified access remains available during Apple’s configured billing grace period.</p>
+              </div>
+              <div class="support-question">
+                <h3>Does Family Sharing work?</h3>
+                <p>Both Pro plans are configured to support Family Sharing. Apple controls eligibility and purchase sharing; each family member restores through their own Apple Account.</p>
+              </div>
+            </section>
 
-    <h2>The Vision Pro doesn't find my Mac</h2>
-    <p>The headset discovers the Mac via Bonjour on the local network. Check:</p>
-    <ul>
-        <li>Mac and Vision Pro are on the <strong>same Wi-Fi</strong>. Different networks (e.g., a guest network) won't see each other.</li>
-        <li>VisionDeck is <strong>running on the Mac</strong>. The menu-bar icon should say "Waiting for Vision Pro…" or "1 Vision Pro connected."</li>
-        <li>No <strong>firewall</strong> is blocking it. macOS may prompt to "Allow incoming connections" the first time — say yes.</li>
-        <li>Your router doesn't <strong>isolate clients</strong> (sometimes called "AP isolation"). Many enterprise networks do this — try a personal hotspot to confirm.</li>
-    </ul>
+            <section class="support-card" id="workspaces">
+              <h2>Screens and saved workspaces</h2>
+              <div class="support-question">
+                <h3>How do saved workspaces sync?</h3>
+                <p>While paired, the Mac and Vision Pro synchronize profiles over the same encrypted local connection as the session. Profiles include screen count, aspect ratios, resolutions, positions, distances, sizes, rotations, tilt, and curve. No profile is uploaded to a VisionDeck cloud service.</p>
+              </div>
+              <div class="support-question">
+                <h3>How do I match distance and physical size?</h3>
+                <p>VisionDeck Pro adds <strong>Precision Layout</strong> on Mac. Select one or more screens, enter distance in metres, and choose a percentage of the largest common physical diagonal. Multi-selection applies the same distance and diagonal in Flat, Curved, or Mixed layouts.</p>
+              </div>
+              <div class="support-question">
+                <h3>A connected physical monitor is missing</h3>
+                <ul>
+                  <li>Confirm it is active in <strong>System Settings ▸ Displays</strong> and leave VisionDeck open while macOS reports the topology change.</li>
+                  <li>Reconnect the VisionDeck session once if the monitor was attached while the Mac slept.</li>
+                  <li>VisionDeck Pro includes active physical displays up to the five-screen workspace limit; Free remains one display.</li>
+                </ul>
+              </div>
+            </section>
 
-    <h2>Screen Recording permission denied</h2>
-    <p>VisionDeck needs Screen Recording to capture your displays. To grant:</p>
-    <ol>
-        <li>Open <strong>System Settings ▸ Privacy &amp; Security ▸ Screen Recording</strong>.</li>
-        <li>Enable <strong>VisionDeck</strong> in the list.</li>
-        <li>If the toggle is greyed out, click the lock and authenticate first.</li>
-        <li>Return to VisionDeck. If macOS requests a relaunch, relaunch the app once.</li>
-    </ol>
-    <p>If VisionDeck doesn't appear in the list, open the Mac app and choose <strong>Grant Screen Recording Access</strong>. This explicit action opens the system permission flow.</p>
+            <section class="support-card" id="updates">
+              <h2>Installation and updates</h2>
+              <div class="support-question">
+                <h3>macOS shows an unidentified-developer warning</h3>
+                <p>A public notarized DMG should not produce that warning. Delete the copy, download again only from the <a href="downloads.html">official Mac Host page</a>, verify the checksum, and reinstall. Every public release is expected to include a stable Developer ID signature and stapled notarization ticket.</p>
+              </div>
+              <div class="support-question">
+                <h3>The host keeps asking for Screen Recording</h3>
+                <p>macOS binds the permission to an app’s code signature. Local unsigned source builds can change identity after rebuilds. Use the notarized public DMG, or contributors can use <code>./scripts/build-host.sh</code> with a stable Apple Development identity.</p>
+              </div>
+              <div class="support-question">
+                <h3>Automatic update is not working</h3>
+                <ul>
+                  <li>Choose <strong>VisionDeck ▸ Check for Updates…</strong>.</li>
+                  <li>Confirm the Mac can reach the public release feed.</li>
+                  <li>Move VisionDeck into Applications; Sparkle cannot replace an app launched directly from its DMG.</li>
+                </ul>
+              </div>
+            </section>
 
-    <h2>The screen is black or shows a placeholder forever</h2>
-    <ul>
-        <li>Confirm the Mac is actually streaming (menu-bar icon).</li>
-        <li>Move the headset to a different Wi-Fi position — high packet loss can stall the stream.</li>
-        <li>Quit and relaunch the Vision Pro app. It auto-reconnects, but a fresh restart can clear stale state.</li>
-    </ul>
+            <section class="support-card" id="contact">
+              <h2>Get help without exposing private data</h2>
+              <h3>Bug or product issue</h3>
+              <p>Use the <a href="https://github.com/in16guus/visiondeck-releases/issues/new/choose" target="_blank" rel="noreferrer">public issue forms</a>. Include macOS and visionOS versions, the VisionDeck version from <strong>About VisionDeck</strong>, exact steps, what happened, and redacted Console logs filtered by <code>VisionDeck</code>.</p>
+              <h3>Security issue</h3>
+              <p>Do not open a public issue for a vulnerability. Use the <a href="https://github.com/in16guus/visiondeck-releases/security/advisories/new" target="_blank" rel="noreferrer">private security advisory form</a> so the report remains confidential while it is investigated.</p>
+              <p class="notice"><strong>Never include:</strong> a pairing code, private screen contents, Apple Account information, payment details, or unredacted logs containing personal data.</p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <h2>The Mac app reopens the "unidentified developer" warning</h2>
-    <p>This shouldn't happen with the notarized DMG. If it does, the DMG may have been re-downloaded with a quarantine flag set incorrectly. Re-download from
-       <a href="https://github.com/in16guus/visiondeck-releases/releases">GitHub Releases</a>
-       and re-install.</p>
-    <p>Use only the official <a href="downloads.html">VisionDeck download page</a>. Every public release includes a SHA-256 checksum and is expected to have a stapled Apple notarization ticket.</p>
-
-    <h2>The host keeps re-prompting for Screen Recording</h2>
-    <p>macOS ties the Screen Recording grant to the app's code signature. If you're running an unsigned build (built from source without Xcode auto-signing in), every rebuild changes the signature and re-prompts. Either:</p>
-    <ul>
-        <li>Use the notarized DMG (signed with a stable Developer ID — the grant persists), or</li>
-        <li>Run <code>./scripts/build-host.sh</code> which signs with a stable Apple Development identity.</li>
-    </ul>
-
-    <h2>Auto-update isn't working</h2>
-    <p>The Mac app checks for updates via Sparkle when launched. If it's stuck:</p>
-    <ul>
-        <li>Click <strong>VisionDeck ▸ Check for Updates…</strong> manually.</li>
-        <li>Confirm you have an internet connection.</li>
-        <li>If you launched from the DMG directly without dragging to Applications, Sparkle can't replace the bundle. Drag the app to Applications first.</li>
-    </ul>
-
-    <h2>Performance feels stuttery</h2>
-    <ul>
-        <li>Lower the resolution of peripheral screens in the in-headset Configure panel.</li>
-        <li>Reduce the number of active screens (the dock has a +/- stepper).</li>
-        <li>Move the Mac closer to your Wi-Fi router. 5 GHz or Wi-Fi 6/6E gives the best results.</li>
-    </ul>
-
-    <h2>Audio crackles or briefly drops out</h2>
-    <ul>
-        <li>Confirm that Mac and Vision Pro have a strong, low-loss Wi-Fi connection; avoid guest networks and congested 2.4 GHz channels.</li>
-        <li>Temporarily reduce active display count to separate network saturation from an audio-device problem.</li>
-        <li>Disconnect Bluetooth audio devices from the Mac and test the built-in output once.</li>
-        <li>If the issue repeats several times per second, stop using that build and file an issue with a timestamp and Console logs. Repeated crackling does not meet the release quality gate.</li>
-    </ul>
-
-    <hr>
-
-    <h2>Still stuck? File an issue</h2>
-    <p>Open a GitHub issue at
-       <a href="https://github.com/in16guus/visiondeck-releases/issues">github.com/in16guus/visiondeck-releases/issues</a>.
-       Please include:</p>
-    <ul>
-        <li>macOS version (26.5 or later)</li>
-        <li>visionOS version (26.5 or later)</li>
-        <li>VisionDeck version (visible in <strong>About VisionDeck</strong>)</li>
-        <li>What you tried and what happened</li>
-        <li>Any error messages in <strong>Console.app</strong> filtered by <code>VisionDeck</code></li>
-    </ul>
-    <p><strong>Do not post your pairing code, private screen contents, Apple Account information, or unredacted logs containing personal data.</strong></p>
-
-    <h2>Report a security issue privately</h2>
-    <p>Do not open a public issue for a vulnerability. Use GitHub's <a href="https://github.com/in16guus/visiondeck-releases/security/advisories/new">private security advisory form</a> so details remain private while they are investigated.</p>
-
-    <hr>
-    <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="release-notes.html">Release Notes</a></p>
-</div>
+  <footer class="site-footer">
+    <div class="page-shell footer-main">
+      <a class="brand brand-on-dark" href="index.html" aria-label="VisionDeck home">
+        <img src="assets/brand/visiondeck-app-icon.png" alt="" width="30" height="30">
+        <span>VisionDeck</span>
+      </a>
+      <nav aria-label="Footer">
+        <a href="index.html#product">Product</a>
+        <a href="index.html#performance">Performance</a>
+        <a href="downloads.html">Mac Host</a>
+        <a href="support.html">Support</a>
+        <a href="release-notes.html">Release notes</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+    <div class="page-shell footer-legal">
+      <span>© 2026 VisionDeck</span>
+      <span>VisionDeck is an independent product and is not affiliated with Apple Inc. Apple, Mac, Apple Vision Pro, macOS, and visionOS are trademarks of Apple Inc.</span>
+    </div>
+  </footer>
 </body>
 </html>

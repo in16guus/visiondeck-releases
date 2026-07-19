@@ -1,86 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VisionDeck — Privacy</title>
-<link rel="icon" href="favicon.png" type="image/png">
-<style>
-:root { --bg: #0b0918; --fg: #f5f3ff; --muted: #b6b0e6; --accent: #a78bfa; --card: #1a153a; }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--fg); }
-.container { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
-h1 { font-size: 40px; margin-bottom: 8px; color: var(--accent); }
-.subtitle { color: var(--muted); margin-bottom: 40px; }
-h2 { font-size: 22px; margin: 40px 0 12px; }
-p, li { color: var(--muted); margin-bottom: 12px; }
-ul { padding-left: 24px; margin-bottom: 16px; }
-a { color: var(--accent); }
-.nav { margin-bottom: 32px; }
-.summary { background: var(--card); padding: 24px; border-radius: 12px; margin-bottom: 32px; }
-.summary h3 { color: var(--fg); font-size: 20px; margin-bottom: 12px; }
-.summary li { color: var(--fg); }
-hr { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 48px 0; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#03060b">
+  <meta name="color-scheme" content="dark">
+  <title>VisionDeck Privacy — Your Workspace Stays Yours</title>
+  <meta name="description" content="VisionDeck has no telemetry, analytics, advertising, or cloud account. Screen frames stream directly over your encrypted local connection.">
+  <link rel="canonical" href="https://in16guus.github.io/visiondeck-releases/privacy.html">
+  <meta property="og:title" content="VisionDeck Privacy">
+  <meta property="og:description" content="No telemetry. No analytics. No cloud account. Your workspace stays on your devices and local network.">
+  <meta property="og:url" content="https://in16guus.github.io/visiondeck-releases/privacy.html">
+  <meta property="og:image" content="https://in16guus.github.io/visiondeck-releases/assets/product/visiondeck-spatial-cinema-hero-2026.webp">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/visiondeck-app-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/brand/visiondeck-app-icon.png">
+  <link rel="stylesheet" href="site.css?v=20260720-5">
+  <link rel="stylesheet" href="secondary.css?v=20260720-5">
+  <script defer src="site.js?v=20260720-5"></script>
 </head>
-<body>
-<div class="container">
-    <div class="nav"><a href="index.html">← VisionDeck</a></div>
+<body class="secondary-page">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <h1>Privacy</h1>
-    <p class="subtitle">Last updated: 2026-07-12.</p>
+  <header class="site-header" data-header>
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="VisionDeck home"><img src="assets/brand/visiondeck-app-icon.png" alt="" width="30" height="30"><span>VisionDeck</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+        <span class="sr-only">Open navigation</span><img class="menu-open-icon" src="assets/icons/menu-2.svg" alt="" width="24" height="24"><img class="menu-close-icon" src="assets/icons/x.svg" alt="" width="24" height="24">
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+        <div class="nav-links">
+          <a href="index.html#product">Product</a><a href="index.html#experience">Experience</a><a href="index.html#performance">Performance</a><a href="privacy.html" aria-current="page">Privacy</a><a href="index.html#pricing">Pricing</a>
+        </div>
+        <div class="nav-actions"><a class="nav-host" href="downloads.html">Mac Host — Free</a><a class="nav-primary" href="https://github.com/in16guus/visiondeck-releases/releases" target="_blank" rel="noreferrer">Get launch updates</a></div>
+      </nav>
+    </div>
+  </header>
 
-    <div class="summary">
-        <h3>The short version</h3>
-        <ul>
-            <li>VisionDeck does not collect, sell, or send your data to us or to third parties.</li>
-            <li>No telemetry. No analytics. No cloud account. No advertising.</li>
-            <li>Frames stream directly from your Mac to your Vision Pro over local network. Nothing leaves your LAN.</li>
-            <li>The Mac app contacts the public release feed for updates. The visionOS app contacts Apple's App Store only for VisionDeck Pro products and verified entitlement status.</li>
-        </ul>
+  <main class="secondary-main" id="main">
+    <section class="subpage-hero" aria-labelledby="page-title">
+      <div class="page-shell subpage-hero-layout">
+        <div class="subpage-hero-copy">
+          <p class="subpage-kicker">Privacy by architecture</p>
+          <h1 id="page-title">Your workspace stays yours.</h1>
+          <p class="subpage-lede">No telemetry. No analytics. No advertising. No VisionDeck cloud account. Your screens move between your Mac and Vision Pro—not through our servers.</p>
+        </div>
+        <aside class="hero-status" aria-label="Privacy summary">
+          <div class="status-label"><img src="assets/icons/lock.svg" alt="" width="20" height="20"> Local and encrypted</div>
+          <p>Pairing establishes TLS and DTLS application connections for screen, audio, input, layout, and focus traffic on your local network.</p>
+          <a class="button button-ghost" href="#data-flow">See every data flow</a>
+        </aside>
+      </div>
+    </section>
+
+    <div class="secondary-tabs-wrap">
+      <nav class="page-shell secondary-tabs" aria-label="Resources">
+        <a href="downloads.html">Mac Host</a><a href="support.html">Support</a><a href="release-notes.html">Release notes</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a>
+      </nav>
     </div>
 
-    <h2>What data flows where</h2>
-    <p><strong>Inside your LAN:</strong> the visionOS app discovers the Mac via Bonjour and connects to the host over TCP and UDP. Captured screen frames and Mac audio are encoded and streamed to the headset. Pointer, keyboard, layout, and focus updates flow back to the paired Mac. VisionDeck protects these application connections with TLS and DTLS using the secret established during pairing. Traffic is also protected by your local network's link security.</p>
+    <section class="secondary-content">
+      <div class="page-shell secondary-layout">
+        <aside class="page-toc" aria-label="Privacy policy contents">
+          <p>In this policy</p>
+          <nav>
+            <a href="#summary">Short version</a><a href="#data-flow">Data flows</a><a href="#storage">On-device storage</a><a href="#permissions">Permissions</a><a href="#components">Components</a><a href="#changes">Changes &amp; contact</a>
+          </nav>
+        </aside>
 
-    <p><strong>Outside your LAN:</strong> the Mac app's Sparkle updater fetches the signed RSS appcast from the public <code>in16guus/visiondeck-releases</code> GitHub Release roughly once per day to see if a new version is available. On visionOS, Apple's StoreKit framework contacts the App Store to load subscription products, complete purchases, restore purchases, and verify the current VisionDeck Pro entitlement. VisionDeck has no purchase server and does not receive payment details.</p>
+        <div class="article-stack">
+          <section class="legal-summary" id="summary">
+            <h2>The short version</h2>
+            <ul>
+              <li>VisionDeck does not collect, sell, or send your data to us or advertising partners.</li>
+              <li>Screen frames and Mac audio stream directly to Vision Pro over your local network.</li>
+              <li>The Mac Host contacts the public release feed for updates.</li>
+              <li>The Vision Pro app uses Apple’s StoreKit only for product information, purchases, restores, and verified entitlement status.</li>
+            </ul>
+            <p class="legal-date">Last updated July 12, 2026</p>
+          </section>
 
-    <h2>What we store on your device</h2>
-    <ul>
-        <li>Your workspace layout / preset / environment choice in <code>NSUserDefaults</code> so it restores on next launch.</li>
-        <li>A custom-environment photo you opt to use, in the visionOS app's Application Support directory.</li>
-        <li>The pairing secret in the operating system Keychain on both devices.</li>
-        <li>Sparkle's update-check timestamp in <code>NSUserDefaults</code> on the Mac.</li>
-        <li>Your App Store transaction and entitlement records are maintained by Apple. VisionDeck reads Apple's cryptographically verified local result and does not upload it to VisionDeck servers.</li>
-    </ul>
-    <p>You can remove the custom photo from inside VisionDeck. Deleting the apps removes their local settings and files. The pairing secret is overwritten after you enter and successfully connect with a different pairing code; operating-system Keychain items may otherwise persist across reinstall.</p>
+          <section class="content-card" id="data-flow">
+            <h2>What data flows where</h2>
+            <h3>Inside your local network</h3>
+            <p>The Vision Pro app discovers the Mac with Bonjour and connects over TCP and UDP. Captured screen frames and Mac audio are encoded and streamed to the headset. Pointer, keyboard, layout, and focus updates return to the paired Mac. VisionDeck protects these application connections with TLS and DTLS using the secret established during pairing. Your local network’s link security provides an additional layer.</p>
+            <h3>Outside your local network</h3>
+            <p>The Mac Host’s Sparkle updater fetches the signed RSS appcast from the public <code>in16guus/visiondeck-releases</code> GitHub Release about once per day to check for a new version. On Vision Pro, Apple’s StoreKit framework contacts the App Store to load subscription products, complete or restore purchases, and verify the current Pro entitlement. VisionDeck has no purchase server and receives no payment details.</p>
+          </section>
 
-    <h2>What permissions VisionDeck asks for</h2>
-    <ul>
-        <li><strong>Screen Recording (Mac)</strong> — required to capture and stream your displays to the headset. This is the entire point of the app.</li>
-        <li><strong>Local Network (both)</strong> — required to find each other via Bonjour and connect.</li>
-        <li><strong>World sensing and hand tracking (Vision Pro)</strong> — used for spatial screen placement and direct interaction while the immersive workspace is open.</li>
-        <li><strong>Photos (Vision Pro, user initiated)</strong> — Apple's system photo picker provides only the photo you choose for Custom Photo. VisionDeck does not browse your library.</li>
-    </ul>
-    <p>VisionDeck does not request camera, microphone, contacts, or location access.</p>
+          <section class="content-card" id="storage">
+            <h2>What stays on your devices</h2>
+            <ul>
+              <li>Workspace layout, preset, visual preferences, and environment choice in <code>NSUserDefaults</code>.</li>
+              <li>A Custom Photo you explicitly choose, stored in the Vision Pro app’s Application Support directory.</li>
+              <li>The pairing secret in the operating-system Keychain on both devices.</li>
+              <li>Sparkle’s update-check timestamp in <code>NSUserDefaults</code> on Mac.</li>
+              <li>App Store transaction and entitlement records maintained by Apple. VisionDeck reads Apple’s cryptographically verified local result and does not upload it to VisionDeck servers.</li>
+            </ul>
+            <p>You can remove the Custom Photo inside VisionDeck. Deleting the apps removes their local settings and files. A pairing secret is replaced after you successfully connect with a different pairing code; operating-system Keychain items may otherwise persist across reinstall.</p>
+          </section>
 
-    <h2>App Store Privacy Manifest</h2>
-    <p>The bundled Apple-required Privacy Manifests declare no tracking, no collected data types, and only standard reasons for UserDefaults and file-timestamp access. You can inspect them in the app bundles or in the source tree at <code>Apps/ImmersedMac/PrivacyInfo.xcprivacy</code> and <code>Apps/ImmersedVision/PrivacyInfo.xcprivacy</code>.</p>
+          <section class="content-card" id="permissions">
+            <h2>Permissions, with a reason for each one</h2>
+            <ul>
+              <li><strong>Screen Recording on Mac</strong> — captures the displays you choose to stream.</li>
+              <li><strong>Local Network on both devices</strong> — discovers the paired device and carries the session.</li>
+              <li><strong>World sensing and hand tracking on Vision Pro</strong> — places and directly manipulates spatial screens while the immersive workspace is open.</li>
+              <li><strong>Photos on Vision Pro, user initiated</strong> — Apple’s system picker exposes only the photo you select for Custom Photo. VisionDeck cannot browse the library.</li>
+            </ul>
+            <p>VisionDeck does not request camera, microphone, contacts, or location access.</p>
+            <h3>Apple privacy manifests</h3>
+            <p>The bundled privacy manifests declare no tracking, no collected data types, and only standard reasons for UserDefaults and file-timestamp access. They are visible in the app bundles and source tree at <code>Apps/ImmersedMac/PrivacyInfo.xcprivacy</code> and <code>Apps/ImmersedVision/PrivacyInfo.xcprivacy</code>.</p>
+          </section>
 
-    <h2>Third-party components</h2>
-    <ul>
-        <li><strong>Sparkle</strong> — auto-update framework for the Mac app. Only contacts the appcast URL configured above.</li>
-        <li><strong>Apple media and spatial frameworks</strong> — system frameworks used for capture, encoding, playback, networking, and spatial presentation.</li>
-        <li><strong>Apple StoreKit</strong> — displays localized VisionDeck Pro offers and verifies purchases. Apple's handling of Apple Account and payment data is governed by Apple's privacy policy.</li>
-    </ul>
+          <section class="content-card" id="components">
+            <h2>Third-party and system components</h2>
+            <ul>
+              <li><strong>Sparkle</strong> provides Mac updates and contacts only the configured public appcast URL.</li>
+              <li><strong>Apple media and spatial frameworks</strong> provide capture, encoding, playback, networking, and spatial presentation.</li>
+              <li><strong>Apple StoreKit</strong> displays localized Pro offers and verifies purchases. Apple’s privacy policy governs Apple Account and payment data.</li>
+            </ul>
+          </section>
 
-    <hr>
+          <section class="content-card" id="changes">
+            <h2>Changes and contact</h2>
+            <p>Material changes are announced in the <a href="release-notes.html">release notes</a>. The canonical policy is published at <a href="https://in16guus.github.io/visiondeck-releases/privacy.html">in16guus.github.io/visiondeck-releases/privacy.html</a>.</p>
+            <p>For a privacy question, use the <a href="https://github.com/in16guus/visiondeck-releases/issues/new/choose" target="_blank" rel="noreferrer">public support forms</a>. Report vulnerabilities through the <a href="https://github.com/in16guus/visiondeck-releases/security/advisories/new" target="_blank" rel="noreferrer">private security advisory form</a>.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <h2>Changes to this policy</h2>
-    <p>Material changes will be announced in the release notes. This policy lives at <a href="https://in16guus.github.io/visiondeck-releases/privacy.html">in16guus.github.io/visiondeck-releases/privacy.html</a>.</p>
-
-    <h2>Contact</h2>
-    <p>Open an issue at <a href="https://github.com/in16guus/visiondeck-releases/issues">github.com/in16guus/visiondeck-releases/issues</a>.</p>
-</div>
+  <footer class="site-footer">
+    <div class="page-shell footer-main">
+      <a class="brand brand-on-dark" href="index.html" aria-label="VisionDeck home"><img src="assets/brand/visiondeck-app-icon.png" alt="" width="30" height="30"><span>VisionDeck</span></a>
+      <nav aria-label="Footer"><a href="index.html#product">Product</a><a href="index.html#performance">Performance</a><a href="downloads.html">Mac Host</a><a href="support.html">Support</a><a href="release-notes.html">Release notes</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+    </div>
+    <div class="page-shell footer-legal"><span>© 2026 VisionDeck</span><span>VisionDeck is an independent product and is not affiliated with Apple Inc. Apple, Mac, Apple Vision Pro, macOS, and visionOS are trademarks of Apple Inc.</span></div>
+  </footer>
 </body>
 </html>
