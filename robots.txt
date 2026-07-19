@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://in16guus.github.io/visiondeck-releases/sitemap.xml
