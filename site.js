@@ -16,7 +16,6 @@ const updateDemoToggle = () => {
   if (!demoToggle) return;
   demoToggle.textContent = demoPausedByUser ? 'Play' : 'Pause';
   demoToggle.setAttribute('aria-label', demoPausedByUser ? 'Play product demo' : 'Pause product demo');
-  demoToggle.setAttribute('aria-pressed', String(demoPausedByUser));
 };
 
 const syncDemoPlayback = () => {
@@ -112,6 +111,8 @@ const tourOpeners = [...document.querySelectorAll('[data-tour-open]')];
 const tourClose = document.querySelector('[data-tour-close]');
 const tourPrevious = document.querySelector('[data-tour-prev]');
 const tourNext = document.querySelector('[data-tour-next]');
+const tourNextLabel = document.querySelector('[data-tour-next-label]');
+const tourNextIcon = document.querySelector('[data-tour-next-icon]');
 const tourProgress = document.querySelector('[data-tour-progress]');
 const tourSlides = [...document.querySelectorAll('[data-tour-slide]')];
 let tourIndex = 0;
@@ -125,6 +126,10 @@ const renderTour = () => {
   });
 
   if (tourProgress) tourProgress.textContent = `${tourIndex + 1} / ${tourSlides.length}`;
+  if (tourPrevious) tourPrevious.disabled = tourIndex === 0;
+  const onLastSlide = tourIndex === tourSlides.length - 1;
+  if (tourNextLabel) tourNextLabel.textContent = onLastSlide ? 'Done' : 'Next';
+  if (tourNextIcon) tourNextIcon.hidden = onLastSlide;
 };
 
 const showTour = (opener) => {
@@ -145,12 +150,17 @@ tourOpeners.forEach((opener) => opener.addEventListener('click', () => showTour(
 tourClose?.addEventListener('click', closeTour);
 
 tourPrevious?.addEventListener('click', () => {
-  tourIndex = (tourIndex - 1 + tourSlides.length) % tourSlides.length;
+  if (tourIndex === 0) return;
+  tourIndex -= 1;
   renderTour();
 });
 
 tourNext?.addEventListener('click', () => {
-  tourIndex = (tourIndex + 1) % tourSlides.length;
+  if (tourIndex === tourSlides.length - 1) {
+    closeTour();
+    return;
+  }
+  tourIndex += 1;
   renderTour();
 });
 
@@ -172,12 +182,12 @@ window.addEventListener('keydown', (event) => {
   }
 
   if (!tourDialog?.open) return;
-  if (event.key === 'ArrowLeft') {
-    tourIndex = (tourIndex - 1 + tourSlides.length) % tourSlides.length;
+  if (event.key === 'ArrowLeft' && tourIndex > 0) {
+    tourIndex -= 1;
     renderTour();
   }
-  if (event.key === 'ArrowRight') {
-    tourIndex = (tourIndex + 1) % tourSlides.length;
+  if (event.key === 'ArrowRight' && tourIndex < tourSlides.length - 1) {
+    tourIndex += 1;
     renderTour();
   }
 });

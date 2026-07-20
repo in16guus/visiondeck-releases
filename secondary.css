@@ -118,6 +118,11 @@
   box-shadow: 0 0 0 5px rgba(246, 185, 78, 0.11);
 }
 
+.hero-status.is-live .status-dot {
+  background: #48d597;
+  box-shadow: 0 0 0 5px rgba(72, 213, 151, 0.12);
+}
+
 .status-label img {
   width: 20px;
   height: 20px;
@@ -135,6 +140,20 @@
 .hero-status .button {
   width: 100%;
   margin-top: 20px;
+}
+
+.hero-status .release-checksum {
+  margin-top: 13px;
+  text-align: center;
+}
+
+.release-checksum a {
+  color: var(--muted-strong);
+  text-underline-offset: 3px;
+}
+
+.release-checksum a:hover {
+  color: var(--white-pure);
 }
 
 .secondary-tabs-wrap {
@@ -514,6 +533,10 @@
   margin-top: 29px;
   padding-top: 28px;
   border-top: 1px solid var(--line);
+}
+
+.support-card > h2 + .support-question {
+  margin-top: 28px;
 }
 
 .support-question h3 {
