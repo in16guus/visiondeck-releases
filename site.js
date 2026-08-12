@@ -193,3 +193,23 @@ window.addEventListener('keydown', (event) => {
 });
 
 renderTour();
+
+const faqSearch = document.querySelector('[data-faq-search]');
+const faqItems = [...document.querySelectorAll('[data-faq-item]')];
+const faqEmpty = document.querySelector('[data-faq-empty]');
+
+const filterFAQ = () => {
+  if (!faqSearch || faqItems.length === 0) return;
+  const query = faqSearch.value.trim().toLocaleLowerCase();
+  let visibleCount = 0;
+
+  faqItems.forEach((item) => {
+    const matches = query === '' || item.textContent.toLocaleLowerCase().includes(query);
+    item.toggleAttribute('hidden', !matches);
+    if (matches) visibleCount += 1;
+  });
+
+  faqEmpty?.toggleAttribute('hidden', visibleCount !== 0);
+};
+
+faqSearch?.addEventListener('input', filterFAQ);

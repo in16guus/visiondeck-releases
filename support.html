@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=6792746717">
   <meta name="theme-color" content="#03060b">
   <meta name="color-scheme" content="dark">
   <title>VisionDesk Support — Setup, Quality, and Troubleshooting</title>
@@ -23,9 +24,9 @@
   <link rel="icon" href="assets/brand/visiondeck-app-icon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/brand/visiondeck-app-icon.png">
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="site.css?v=20260720-8">
-  <link rel="stylesheet" href="secondary.css?v=20260720-7">
-  <script defer src="site.js?v=20260720-9"></script>
+  <link rel="stylesheet" href="site.css?v=20260812-2">
+  <link rel="stylesheet" href="secondary.css?v=20260812-2">
+  <script defer src="site.js?v=20260812-2"></script>
 </head>
 <body class="secondary-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -42,17 +43,8 @@
         <img class="menu-close-icon" src="assets/icons/x.svg" alt="" width="24" height="24">
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
-        <div class="nav-links">
-          <a href="index.html#product">Product</a>
-          <a href="index.html#experience">Experience</a>
-          <a href="index.html#performance">Performance</a>
-          <a href="index.html#privacy">Privacy</a>
-          <a href="index.html#pricing">Pricing</a>
-        </div>
-        <div class="nav-actions">
-          <a class="nav-host" href="downloads.html">Mac Host — Free</a>
-          <a class="nav-primary" href="https://github.com/in16guus/visiondeck-releases/issues/new/choose" target="_blank" rel="noreferrer">Get help</a>
-        </div>
+        <div class="nav-links"><a href="index.html#product">Product</a><a href="setup.html">Setup</a><a href="faq.html">FAQ</a><a href="support.html" aria-current="page">Support</a><a href="index.html#pricing">Pricing</a></div>
+        <div class="nav-actions"><a class="nav-host" href="downloads.html">Mac Host — Free</a><a class="nav-primary" href="https://apps.apple.com/app/id6792746717" target="_blank" rel="noreferrer">Get VisionDesk</a></div>
       </nav>
     </div>
   </header>
@@ -74,13 +66,7 @@
     </section>
 
     <div class="secondary-tabs-wrap">
-      <nav class="page-shell secondary-tabs" aria-label="Resources">
-        <a href="downloads.html">Mac Host</a>
-        <a href="support.html" aria-current="page">Support</a>
-        <a href="release-notes.html">Release notes</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-      </nav>
+      <nav class="page-shell secondary-tabs" aria-label="Resources"><a href="setup.html">Setup</a><a href="downloads.html">Mac Host</a><a href="faq.html">FAQ</a><a href="support.html" aria-current="page">Support</a><a href="press.html">Press kit</a><a href="release-notes.html">Release notes</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
     </div>
 
     <section class="secondary-content">
@@ -114,7 +100,7 @@
                 <ul>
                   <li>Put both devices on the <strong>same local network</strong>. A Mac connected by Ethernet is fine when the router permits local-device traffic.</li>
                   <li>Confirm VisionDesk is running on the Mac. The menu-bar status should say <strong>Waiting for Vision Pro…</strong> or show a connected headset.</li>
-                  <li>Allow incoming connections if the macOS firewall asks. Guest networks, enterprise client isolation, and “AP isolation” can block Bonjour discovery.</li>
+                  <li>Allow incoming connections if the macOS firewall asks. VisionDesk uses TCP 47823 (control) and UDP 47824 (video) on the local network — a filtering tool such as Little Snitch must allow the Mac Host on those two ports. Guest networks, enterprise client isolation, and “AP isolation” can block Bonjour discovery.</li>
                   <li>Try a personal hotspot once. If discovery works there, the original router or network policy is the cause.</li>
                 </ul>
               </div>
@@ -268,15 +254,7 @@
         <img src="assets/brand/visiondeck-app-icon-64.webp" alt="" width="30" height="30">
         <span>VisionDesk</span>
       </a>
-      <nav aria-label="Footer">
-        <a href="index.html#product">Product</a>
-        <a href="index.html#performance">Performance</a>
-        <a href="downloads.html">Mac Host</a>
-        <a href="support.html">Support</a>
-        <a href="release-notes.html">Release notes</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-      </nav>
+      <nav aria-label="Footer"><a href="index.html#product">Product</a><a href="setup.html">Setup</a><a href="faq.html">FAQ</a><a href="downloads.html">Mac Host</a><a href="support.html">Support</a><a href="press.html">Press kit</a><a href="release-notes.html">Release notes</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
     </div>
     <div class="page-shell footer-legal">
       <span>© 2026 VisionDesk</span>
