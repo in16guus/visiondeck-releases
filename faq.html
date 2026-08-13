@@ -1,243 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-itunes-app" content="app-id=6792746717">
-  <meta name="theme-color" content="#03060b">
-  <meta name="color-scheme" content="dark">
-  <title>VisionDesk FAQ — Apple Vision Pro Spatial Workspace</title>
-  <meta name="description" content="Answers about VisionDesk compatibility, setup, networking, privacy, Free and Pro, virtual displays, and troubleshooting on Apple Vision Pro.">
-  <link rel="canonical" href="https://in16guus.github.io/visiondeck-releases/faq.html">
-  <meta property="og:title" content="VisionDesk FAQ">
-  <meta property="og:description" content="Clear answers about setup, networking, privacy, subscriptions, and Mac displays in Apple Vision Pro.">
-  <meta property="og:url" content="https://in16guus.github.io/visiondeck-releases/faq.html">
-  <meta property="og:image" content="https://in16guus.github.io/visiondeck-releases/assets/product/visiondeck-workspace-measurements-2026.webp">
-  <meta property="og:image:alt" content="VisionDesk workspace settings">
-  <meta property="og:site_name" content="VisionDesk">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="VisionDesk FAQ">
-  <meta name="twitter:description" content="Clear answers about setup, networking, privacy, subscriptions, and Mac displays in Apple Vision Pro.">
-  <meta name="twitter:image" content="https://in16guus.github.io/visiondeck-releases/assets/product/visiondeck-workspace-measurements-2026.webp">
-  <link rel="icon" href="assets/brand/visiondeck-app-icon.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/brand/visiondeck-app-icon.png">
-  <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="site.css?v=20260812-2">
-  <link rel="stylesheet" href="secondary.css?v=20260812-2">
-  <script defer src="site.js?v=20260812-2"></script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What do I need to run VisionDesk?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You need Apple Vision Pro running visionOS 26.5 or later, an Apple silicon Mac running macOS 26.5 or later, the VisionDesk app from the App Store, and the free VisionDesk Mac Host. Both devices must be able to reach each other on a private local network."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why is a free Mac Host required?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Mac Host creates the displays, captures the Mac workspace, and sends the encrypted local stream to Vision Pro. It is free and is downloaded separately because the Mac companion is not distributed through the Mac App Store."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the fastest way to get started?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Install VisionDesk on Vision Pro, download and open the Mac Host, allow Screen Recording, then choose the discovered Mac in VisionDesk. The setup guide gives the complete three-step path."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does Vision Pro not find my Mac?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Check that the Mac Host is open, both devices use the same private LAN, and the network does not isolate clients. Guest Wi-Fi, some corporate networks, and VPNs that capture local traffic often block discovery. See connection troubleshooting."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can my Mac use Ethernet while Vision Pro uses Wi-Fi?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. That is often an excellent setup when the router allows local devices to communicate. The Mac can be wired to the router while Vision Pro joins the router’s Wi-Fi."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the optional Ethernet + Internet Sharing setup?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "When the Mac receives internet through Ethernet, macOS can share it through Wi-Fi. Vision Pro then joins the Wi-Fi network created by the Mac, giving the stream a dedicated local wireless link. It is optional, may affect VPNs or managed networks, and should only be used where you control the network. See the dedicated Wi-Fi instructions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I reduce latency or stutter?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Start in Standard quality, use a clean 5 GHz or 6 GHz Wi-Fi connection, avoid guest networks and congested 2.4 GHz, and keep Maximum Quality off until the connection is stable. Reduce peripheral display count before changing several settings at once."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why is the screen black?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "First check that the Mac Host is streaming and still has Screen Recording permission. Reconnect once after waking the Mac or changing monitor hardware. Protected video services can intentionally show a black image because their content protection prevents capture."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which ports does VisionDesk use, and what should my firewall allow?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "VisionDesk streams only on your local network: TCP port 47823 carries control and pairing, UDP port 47824 carries video. Accept the macOS firewall prompt for the Mac Host when it appears. If you run a filtering tool such as Little Snitch or a strict firewall profile, allow incoming local connections to the Mac Host on those two ports. No internet server is involved."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How many Mac displays can I use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "VisionDesk Free includes one complete spatial Mac display. VisionDesk Pro supports two to five displays, subject to the Mac’s capability and the available network and hardware budget."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What does VisionDesk add to a spatial Mac workspace?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "VisionDesk creates real macOS virtual displays and streams them into a workspace that you can arrange in flat, curved, or mixed layouts. You can place, size, rotate, tilt, curve, save, and restore those displays."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does VisionDesk use my raw eye-tracking data?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. VisionDesk does not receive raw eye-tracking data. Its focus-aware quality allocation uses the active screen and a privacy-preserving head-direction estimate to prioritize the screen you are working on."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does my mouse not flow the way I arranged the screens?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Make sure the virtual displays are active in macOS System Settings ▸ Displays, then reconnect VisionDesk once after a Mac sleep or monitor-topology change. The support guide has the complete virtual-display checklist."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does VisionDesk upload my screen or workspace?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. VisionDesk is designed for an encrypted local connection between your Mac and Vision Pro. It has no VisionDesk account, cloud workspace, advertising, or usage analytics. Read the privacy policy for the complete data-flow description."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does the Mac Host ask for Screen Recording?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "macOS requires Screen Recording permission before an app can capture a display. VisionDesk uses it solely for the displays you choose to stream to Vision Pro. You can remove the permission at any time in System Settings."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What should I never include in a support report?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Never post pairing codes, private screen contents, Apple Account information, payment details, or unredacted logs containing personal data. Security vulnerabilities belong in the private security advisory form linked on the support page."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is included in VisionDesk Free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Free includes one complete Mac display, full stream quality, audio, pointer and keyboard input, aspect-ratio choices, spatial controls, visual clarity settings, and local private pairing."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does the 14-day trial work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "An eligible user starts a trial only after confirming a monthly or yearly subscription in Apple’s purchase sheet. Apple shows the localized price, trial eligibility, and renewal terms before confirmation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I restore, cancel, or request a refund?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Use Restore Purchases in the Pro sheet after reinstalling or moving to another Vision Pro with the same Apple Account. Apple manages subscriptions and refunds; use reportaproblem.apple.com for refund requests."
-      }
-    }
-  ]
-}
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>VisionDesk has moved</title>
+<link rel="canonical" href="https://in16guus.github.io/visiondesk-releases/faq.html">
+<meta http-equiv="refresh" content="0; url=https://in16guus.github.io/visiondesk-releases/faq.html">
+<style>
+  :root { color-scheme: light dark; }
+  body { margin:0; min-height:100vh; display:grid; place-items:center;
+         font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         background:#fff; color:#1c1c1e; padding:2rem; text-align:center; }
+  @media (prefers-color-scheme: dark) { body { background:#000; color:#f2f2f7; } }
+  a { color:#0071e3; }
+  p { max-width: 34rem; }
+</style>
 </head>
-<body class="secondary-page">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" data-header><div class="nav-shell"><a class="brand" href="index.html" aria-label="VisionDesk home"><img src="assets/brand/visiondeck-app-icon-64.webp" alt="" width="30" height="30"><span>VisionDesk</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span class="sr-only">Open navigation</span><img class="menu-open-icon" src="assets/icons/menu-2.svg" alt="" width="24" height="24"><img class="menu-close-icon" src="assets/icons/x.svg" alt="" width="24" height="24"></button><nav class="site-nav" id="site-nav" aria-label="Primary" data-nav><div class="nav-links"><a href="index.html#product">Product</a><a href="setup.html">Setup</a><a href="faq.html" aria-current="page">FAQ</a><a href="support.html">Support</a><a href="index.html#pricing">Pricing</a></div><div class="nav-actions"><a class="nav-host" href="downloads.html">Mac Host — Free</a><a class="nav-primary" href="https://apps.apple.com/app/id6792746717" target="_blank" rel="noreferrer">Get VisionDesk</a></div></nav></div></header>
-
-  <main class="secondary-main" id="main">
-    <section class="subpage-hero" aria-labelledby="page-title"><div class="page-shell subpage-hero-layout"><div class="subpage-hero-copy"><p class="subpage-kicker">VisionDesk FAQ</p><h1 id="page-title">The answer,<br>before the friction.</h1><p class="subpage-lede">Search the essentials first. For a step-by-step recovery path, use the support guide.</p></div><aside class="hero-status" aria-label="Quick help"><div class="status-label"><img src="assets/icons/shield-check.svg" alt="" width="20" height="20"> Need a guided fix?</div><p>Start with setup for first run and network configuration. Use support for a specific symptom.</p><a class="button button-ghost" href="support.html">Open support</a></aside></div></section>
-
-    <div class="secondary-tabs-wrap"><nav class="page-shell secondary-tabs" aria-label="Resources"><a href="setup.html">Setup</a><a href="downloads.html">Mac Host</a><a href="faq.html" aria-current="page">FAQ</a><a href="support.html">Support</a><a href="press.html">Press kit</a><a href="release-notes.html">Release notes</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div>
-
-    <section class="secondary-content"><div class="page-shell secondary-layout"><aside class="page-toc" aria-label="FAQ categories"><p>Categories</p><nav><a href="#getting-started">Getting started</a><a href="#connection">Connection</a><a href="#workspace">Workspace</a><a href="#privacy">Privacy</a><a href="#pro">Free &amp; Pro</a><a href="#help">More help</a></nav></aside>
-      <div class="article-stack">
-        <section class="content-card" aria-labelledby="faq-search-title"><h2 id="faq-search-title">Find an answer.</h2><p>Search words such as “Ethernet”, “Screen Recording”, “black”, “subscription”, or “keyboard”.</p><label class="faq-search"><span class="sr-only">Search VisionDesk FAQ</span><input type="search" placeholder="Search the FAQ" autocomplete="off" data-faq-search></label><p class="faq-empty" data-faq-empty hidden>No matching question yet. Try a different word or open support for a guided path.</p></section>
-
-        <section class="content-card" id="getting-started"><h2>Getting started</h2><div class="faq-list">
-          <details class="faq-item" data-faq-item><summary>What do I need to run VisionDesk?</summary><div><p>You need Apple Vision Pro running visionOS 26.5 or later, an Apple silicon Mac running macOS 26.5 or later, the VisionDesk app from the App Store, and the free VisionDesk Mac Host. Both devices must be able to reach each other on a private local network.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>Why is a free Mac Host required?</summary><div><p>The Mac Host creates the displays, captures the Mac workspace, and sends the encrypted local stream to Vision Pro. It is free and is downloaded separately because the Mac companion is not distributed through the Mac App Store.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>What is the fastest way to get started?</summary><div><p>Install VisionDesk on Vision Pro, download and open the Mac Host, allow Screen Recording, then choose the discovered Mac in VisionDesk. The <a href="setup.html">setup guide</a> gives the complete three-step path.</p></div></details>
-        </div></section>
-
-        <section class="content-card" id="connection"><h2>Connection and performance</h2><div class="faq-list">
-          <details class="faq-item" data-faq-item><summary>Why does Vision Pro not find my Mac?</summary><div><p>Check that the Mac Host is open, both devices use the same private LAN, and the network does not isolate clients. Guest Wi-Fi, some corporate networks, and VPNs that capture local traffic often block discovery. See <a href="support.html#connection">connection troubleshooting</a>.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>Can my Mac use Ethernet while Vision Pro uses Wi-Fi?</summary><div><p>Yes. That is often an excellent setup when the router allows local devices to communicate. The Mac can be wired to the router while Vision Pro joins the router’s Wi-Fi.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>What is the optional Ethernet + Internet Sharing setup?</summary><div><p>When the Mac receives internet through Ethernet, macOS can share it through Wi-Fi. Vision Pro then joins the Wi-Fi network created by the Mac, giving the stream a dedicated local wireless link. It is optional, may affect VPNs or managed networks, and should only be used where you control the network. See the <a href="setup.html#sharing">dedicated Wi-Fi instructions</a>.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>How can I reduce latency or stutter?</summary><div><p>Start in Standard quality, use a clean 5 GHz or 6 GHz Wi-Fi connection, avoid guest networks and congested 2.4 GHz, and keep Maximum Quality off until the connection is stable. Reduce peripheral display count before changing several settings at once.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>Why is the screen black?</summary><div><p>First check that the Mac Host is streaming and still has Screen Recording permission. Reconnect once after waking the Mac or changing monitor hardware. Protected video services can intentionally show a black image because their content protection prevents capture.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>Which ports does VisionDesk use, and what should my firewall allow?</summary><div><p>VisionDesk streams only on your local network: TCP port 47823 carries control and pairing, UDP port 47824 carries video. Accept the macOS firewall prompt for the Mac Host when it appears. If you run a filtering tool such as Little Snitch or a strict firewall profile, allow incoming local connections to the Mac Host on those two ports. No internet server is involved.</p></div></details>
-        </div></section>
-
-        <section class="content-card" id="workspace"><h2>Displays and workspace</h2><div class="faq-list">
-          <details class="faq-item" data-faq-item><summary>How many Mac displays can I use?</summary><div><p>VisionDesk Free includes one complete spatial Mac display. VisionDesk Pro supports two to five displays, subject to the Mac’s capability and the available network and hardware budget.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>What does VisionDesk add to a spatial Mac workspace?</summary><div><p>VisionDesk creates real macOS virtual displays and streams them into a workspace that you can arrange in flat, curved, or mixed layouts. You can place, size, rotate, tilt, curve, save, and restore those displays.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>Does VisionDesk use my raw eye-tracking data?</summary><div><p>No. VisionDesk does not receive raw eye-tracking data. Its focus-aware quality allocation uses the active screen and a privacy-preserving head-direction estimate to prioritize the screen you are working on.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>Why does my mouse not flow the way I arranged the screens?</summary><div><p>Make sure the virtual displays are active in macOS System Settings ▸ Displays, then reconnect VisionDesk once after a Mac sleep or monitor-topology change. The support guide has the complete virtual-display checklist.</p></div></details>
-        </div></section>
-
-        <section class="content-card" id="privacy"><h2>Privacy and permissions</h2><div class="faq-list">
-          <details class="faq-item" data-faq-item><summary>Does VisionDesk upload my screen or workspace?</summary><div><p>No. VisionDesk is designed for an encrypted local connection between your Mac and Vision Pro. It has no VisionDesk account, cloud workspace, advertising, or usage analytics. Read the <a href="privacy.html">privacy policy</a> for the complete data-flow description.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>Why does the Mac Host ask for Screen Recording?</summary><div><p>macOS requires Screen Recording permission before an app can capture a display. VisionDesk uses it solely for the displays you choose to stream to Vision Pro. You can remove the permission at any time in System Settings.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>What should I never include in a support report?</summary><div><p>Never post pairing codes, private screen contents, Apple Account information, payment details, or unredacted logs containing personal data. Security vulnerabilities belong in the private security advisory form linked on the support page.</p></div></details>
-        </div></section>
-
-        <section class="content-card" id="pro"><h2>VisionDesk Free and Pro</h2><div class="faq-list">
-          <details class="faq-item" data-faq-item><summary>What is included in VisionDesk Free?</summary><div><p>Free includes one complete Mac display, full stream quality, audio, pointer and keyboard input, aspect-ratio choices, spatial controls, visual clarity settings, and local private pairing.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>How does the 14-day trial work?</summary><div><p>An eligible user starts a trial only after confirming a monthly or yearly subscription in Apple’s purchase sheet. Apple shows the localized price, trial eligibility, and renewal terms before confirmation.</p></div></details>
-          <details class="faq-item" data-faq-item><summary>How do I restore, cancel, or request a refund?</summary><div><p>Use Restore Purchases in the Pro sheet after reinstalling or moving to another Vision Pro with the same Apple Account. Apple manages subscriptions and refunds; use <a href="https://reportaproblem.apple.com/" target="_blank" rel="noreferrer">reportaproblem.apple.com</a> for refund requests.</p></div></details>
-        </div></section>
-
-        <section class="bottom-cta" id="help" aria-labelledby="help-title"><div><h2 id="help-title">Need a symptom-by-symptom fix?</h2><p>Support covers pairing, permissions, picture quality, audio, updates, and secure issue reporting.</p></div><a class="button button-ghost" href="support.html">Open support</a></section>
-      </div>
-    </div></section>
+<body>
+  <main>
+    <h1>VisionDesk has moved</h1>
+    <p>This page now lives at <a href="https://in16guus.github.io/visiondesk-releases/faq.html">https://in16guus.github.io/visiondesk-releases/faq.html</a>. Redirecting you now.</p>
   </main>
-  <footer class="site-footer"><div class="page-shell footer-main"><a class="brand brand-on-dark" href="index.html" aria-label="VisionDesk home"><img src="assets/brand/visiondeck-app-icon-64.webp" alt="" width="30" height="30"><span>VisionDesk</span></a><nav aria-label="Footer"><a href="index.html#product">Product</a><a href="setup.html">Setup</a><a href="faq.html">FAQ</a><a href="downloads.html">Mac Host</a><a href="support.html">Support</a><a href="press.html">Press kit</a><a href="release-notes.html">Release notes</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div><div class="page-shell footer-legal"><span>© 2026 VisionDesk</span><span>VisionDesk is an independent product and is not affiliated with Apple Inc. Apple, Mac, Apple Vision Pro, macOS, and visionOS are trademarks of Apple Inc.</span></div></footer>
+  <script>location.replace("https://in16guus.github.io/visiondesk-releases/faq.html");</script>
 </body>
 </html>
